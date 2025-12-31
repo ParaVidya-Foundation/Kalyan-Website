@@ -1,7 +1,6 @@
 "use client";
 import BookGrid from "@/components/education/Book/BookGrid";
 import Chat from "@/components/education/Book/chat";
-import { useState } from "react";
 import type { Book } from "@/components/education/Book/BookGrid";
 
 const books: Book[] = [
@@ -98,11 +97,10 @@ const books: Book[] = [
 ];
 
 export default function Page() {
-  const [searchQuery, setSearchQuery] = useState("");
   return (
     <main className="">
       <Chat />
-      <BookGrid books={books} searchQuery={searchQuery} />
+      <BookGrid books={books} searchQuery="" />
   
     </main>
   );

@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useMemo } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
@@ -60,11 +60,47 @@ interface LayoutProps {
    COMPONENT
 ------------------------------------------------------------- */
 
+// Memoized section component
+const AIBlogSection = React.memo<{
+  section: { heading: string; paragraphs: string[] };
+  index: number;
+}>(({ section, index }) => (
+  <motion.section variants={item as any} className="mb-24">
+    <h2
+      className={`${mono} 
+        text-[1.65rem] md:text-[2rem] 
+        tracking-tight 
+        font-medium 
+        mb-8`}
+    >
+      {section.heading}
+    </h2>
+
+    {section.paragraphs.map((p, j) => (
+      <p
+        key={j}
+        className={`${body} 
+          text-[1.03rem] md:text-[1.15rem] 
+          leading-[1.75] 
+          text-[#1d1d1f]
+          mb-6`}
+      >
+        {p}
+      </p>
+    ))}
+  </motion.section>
+));
+
+AIBlogSection.displayName = "AIBlogSection";
+
 export default function AIBlogLayout({ post }: LayoutProps) {
-  const formattedDate =
-    typeof post.date === "string"
-      ? post.date
-      : format(new Date(post.date), "MMMM d, yyyy");
+  const formattedDate = useMemo(
+    () =>
+      typeof post.date === "string"
+        ? post.date
+        : format(new Date(post.date), "MMMM d, yyyy"),
+    [post.date]
+  );
 
   const readingTime = post.readingTime || "8 min read";
 
@@ -78,6 +114,7 @@ export default function AIBlogLayout({ post }: LayoutProps) {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           className="pt-16 pb-6 px-6 max-w-4xl mx-auto"
+          style={{ willChange: "transform, opacity" }}
         >
           <ol
             className={`${mono} flex items-center space-x-3 text-[0.62rem] tracking-[0.28em] text-gray-500 uppercase`}
@@ -105,6 +142,7 @@ export default function AIBlogLayout({ post }: LayoutProps) {
                 tracking-tight 
                 font-medium
                 text-center md:text-left`}
+              style={{ willChange: "transform, opacity" }}
             >
               {post.title}
             </motion.h1>
@@ -115,6 +153,7 @@ export default function AIBlogLayout({ post }: LayoutProps) {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.15, duration: 0.65 }}
               className={`${body} mt-5 flex flex-wrap gap-3 text-gray-600 text-sm md:text-[0.95rem] justify-center md:justify-start`}
+              style={{ willChange: "transform, opacity" }}
             >
               {post.author && (
                 <span className="text-black">{post.author}</span>
@@ -141,6 +180,7 @@ export default function AIBlogLayout({ post }: LayoutProps) {
             rounded-[28px]
             shadow-[0_12px_60px_-20px_rgba(0,0,0,0.12)]
           "
+          style={{ willChange: "transform, opacity" }}
         >
           <Image
             src={post.content.heroImage}
@@ -148,6 +188,7 @@ export default function AIBlogLayout({ post }: LayoutProps) {
             fill
             quality={100}
             className="object-cover scale-[1.02]"
+            style={{ transform: "translateZ(0)" }}
           />
 
           {/* Glass Film */}
@@ -161,33 +202,10 @@ export default function AIBlogLayout({ post }: LayoutProps) {
           whileInView="show"
           viewport={{ once: true, margin: "-200px" }}
           className="px-6 py-24 max-w-3xl mx-auto"
+          style={{ willChange: "transform, opacity" }}
         >
           {post.content.sections.map((section, i) => (
-            <motion.section key={i} variants={item as any} className="mb-24">
-
-              <h2
-                className={`${mono} 
-                  text-[1.65rem] md:text-[2rem] 
-                  tracking-tight 
-                  font-medium 
-                  mb-8`}
-              >
-                {section.heading}
-              </h2>
-
-              {section.paragraphs.map((p, j) => (
-                <p
-                  key={j}
-                  className={`${body} 
-                    text-[1.03rem] md:text-[1.15rem] 
-                    leading-[1.75] 
-                    text-[#1d1d1f]
-                    mb-6`}
-                >
-                  {p}
-                </p>
-              ))}
-            </motion.section>
+            <AIBlogSection key={i} section={section} index={i} />
           ))}
         </motion.article>
       </div>

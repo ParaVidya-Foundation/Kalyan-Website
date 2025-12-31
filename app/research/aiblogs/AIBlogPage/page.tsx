@@ -1,10 +1,9 @@
 "use client";
 
-import React from "react";
 import { motion } from "framer-motion";
 
 // Force dynamic rendering to prevent static generation issues
-export const dynamic = 'force-dynamic';
+// export const dynamic = 'force-dynamic'; // Removed - incompatible with cacheComponents
 
 import AIBlogLayout, {
   type AIBlogPostData,
@@ -178,6 +177,7 @@ export default function AIBlogPage() {
               initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4 }}
+              style={{ willChange: "transform, opacity" }}
             >
               <AIRecentPosts posts={recentPosts} />
             </motion.div>
@@ -187,6 +187,7 @@ export default function AIBlogPage() {
               initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.45, delay: 0.05 }}
+              style={{ willChange: "transform, opacity" }}
             >
               <AICategories />
             </motion.div>

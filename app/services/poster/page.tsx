@@ -5,7 +5,7 @@ import TestimonialSlider from "@/components/store/Poster/TestimonialSlider";
 import PosterHero from "@/components/store/Poster/posterhero";
 import PosterGrid from "@/components/store/Poster/postercard";
 import Trailback from "@/components/store/Poster/Trailback";
-import BentoGrid from "@/components/ui/bits/MagicBento";
+import BentoGrid from "@/components/UIComponents/MagicBento";
 import Image from "next/image";
 
 export default function PosterPage() {

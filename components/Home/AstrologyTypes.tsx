@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useMemo } from "react";
+import React, { useState, useMemo, useCallback } from "react";
 
 type VideoMap = Record<string, string>;
 
@@ -11,7 +11,7 @@ const ASTROLOGY_TYPES = [
   "Vastu",
   "Palmistry",
   "Numerology",
-];
+] as const;
 
 const LANGUAGES = [
   "Hindi",
@@ -20,7 +20,7 @@ const LANGUAGES = [
   "Japanese",
   "Russian",
   "ANY...",
-];
+] as const;
 
 const VIDEO_MAP: VideoMap = {
   "Lal Kitab": "/videos/lal-kitabh.mp4",
@@ -44,6 +44,10 @@ export default function AstrologyTypes() {
     () => VIDEO_MAP[activeKey],
     [activeKey]
   );
+
+  const handleKeyChange = useCallback((key: string) => {
+    setActiveKey(key);
+  }, []);
 
   return (
     <section className="relative flex min-h-screen w-full items-center">
@@ -70,7 +74,7 @@ export default function AstrologyTypes() {
                   key={item}
                   label={item}
                   active={activeKey === item}
-                  onClick={() => setActiveKey(item)}
+                  onClick={() => handleKeyChange(item)}
                 />
               ))}
             </div>
@@ -85,7 +89,7 @@ export default function AstrologyTypes() {
                   key={lang}
                   label={lang}
                   active={activeKey === lang}
-                  onClick={() => setActiveKey(lang)}
+                  onClick={() => handleKeyChange(lang)}
                 />
               ))}
             </div>
@@ -102,6 +106,7 @@ export default function AstrologyTypes() {
             loop
             playsInline
             className="h-full w-full object-cover animate-videoFade"
+            style={{ willChange: "transform, opacity" }}
           />
 
           {/* Soft overlay */}
@@ -109,21 +114,22 @@ export default function AstrologyTypes() {
         </div>
       </div>
 
-      {/* Local animations */}
+      {/* Local animations - GPU-accelerated */}
       <style jsx>{`
         @keyframes videoFade {
           from {
             opacity: 0;
-            transform: scale(0.985);
+            transform: scale(0.985) translateZ(0);
           }
           to {
             opacity: 1;
-            transform: scale(1);
+            transform: scale(1) translateZ(0);
           }
         }
 
         .animate-videoFade {
           animation: videoFade 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+          will-change: transform, opacity;
         }
       `}</style>
     </section>
@@ -134,23 +140,21 @@ export default function AstrologyTypes() {
    UI PRIMITIVES
 ========================= */
 
-function SectionLabel({ label }: { label: string }) {
+const SectionLabel = React.memo(({ label }: { label: string }) => {
   return (
     <p className="font-mono text-xs uppercase tracking-widest text-neutral-500">
       {label}
     </p>
   );
-}
+});
 
-function Pill({
-  label,
-  active,
-  onClick,
-}: {
+SectionLabel.displayName = "SectionLabel";
+
+const Pill = React.memo<{
   label: string;
   active: boolean;
   onClick: () => void;
-}) {
+}>(({ label, active, onClick }) => {
   return (
     <button
       onClick={onClick}
@@ -158,14 +162,18 @@ function Pill({
         rounded-full px-4 py-1.5 text-sm
         transition-all duration-200
         border
+        will-change-transform
         ${
           active
             ? "bg-neutral-900 text-white border-neutral-900 shadow-sm scale-[1.05]"
             : "bg-neutral-50 text-neutral-700 border-neutral-300 hover:bg-neutral-100"
         }
       `}
+      style={{ transform: "translateZ(0)" }}
     >
       {label}
     </button>
   );
-}
+});
+
+Pill.displayName = "Pill";

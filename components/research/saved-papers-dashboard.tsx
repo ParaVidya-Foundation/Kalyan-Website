@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useState, useCallback } from "react";
 import { motion } from "framer-motion";
 import { Download, Tag, Wand2, Search } from "lucide-react";
 
@@ -16,10 +16,13 @@ type SavedPapersDashboardProps = {
   documents: SavedPaper[];
 };
 
-const motionConfig = { duration: 0.35, ease: [0.16, 1, 0.3, 1] } as const;
+const motionConfig = { duration: 0.35, ease: [0.16, 1, 0.3, 1] as [number, number, number, number] } as const;
 
 export function SavedPapersDashboard({ documents }: SavedPapersDashboardProps) {
   const [activeTag, setActiveTag] = useState<string>("All");
+  const handleTagChange = useCallback((tag: string | undefined) => {
+    if (tag) setActiveTag(tag);
+  }, []);
   const [loading, setLoading] = useState(true);
   const [searchQuery, setSearchQuery] = useState("");
 
@@ -39,7 +42,7 @@ export function SavedPapersDashboard({ documents }: SavedPapersDashboardProps) {
     let list =
       activeTag === "All"
         ? documents
-        : documents.filter((doc) => doc.tags.includes(activeTag));
+        : documents.filter((doc) => doc.tags?.includes(activeTag) ?? false);
 
     if (!q) return list;
 
@@ -90,6 +93,7 @@ export function SavedPapersDashboard({ documents }: SavedPapersDashboardProps) {
         animate={{ opacity: 1, y: 0 }}
         transition={motionConfig}
         className="rounded-3xl border border-white/60 bg-white/80 p-4 shadow-lg shadow-indigo-100 backdrop-blur-xl"
+        style={{ willChange: "transform, opacity" }}
       >
         <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
           {/* Tags */}
@@ -103,7 +107,7 @@ export function SavedPapersDashboard({ documents }: SavedPapersDashboardProps) {
                     ? "cursor-pointer rounded-full bg-gray-900 px-4 py-2 text-white"
                     : "cursor-pointer rounded-full border-gray-200 px-4 py-2 text-gray-600"
                 }
-                onClick={() => setActiveTag(tag)}
+                onClick={() => handleTagChange(tag)}
               >
                 {tag}
               </Badge>
@@ -133,6 +137,7 @@ export function SavedPapersDashboard({ documents }: SavedPapersDashboardProps) {
           animate={{ opacity: 1, y: 0 }}
           transition={motionConfig}
           className="mt-6 grid gap-5 md:grid-cols-2"
+          style={{ willChange: "transform, opacity" }}
         >
           {filteredDocuments.length === 0 ? (
             <div className="col-span-full rounded-3xl border border-gray-100 bg-white p-8 text-center text-sm text-gray-500">

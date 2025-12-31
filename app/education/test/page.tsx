@@ -1,6 +1,5 @@
 "use client";
 
-import React, { useRef, useEffect, useState, useCallback } from "react";
 import TestSection from "@/components/education/test/testsection";
 import SubjectCard from "@/components/education/test/SubjectCard";
 import TestHero from "@/components/education/test/TestHero";

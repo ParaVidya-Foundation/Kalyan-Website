@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useMemo } from "react";
 import { TestimonialCard } from "./small/TestimonialCard";
 
 const testimonials = [
@@ -37,6 +37,24 @@ const testimonials = [
 ];
 
 export default function Testimonials() {
+  // Memoize duplicated testimonials to prevent recreation on every render
+  const duplicatedTestimonials = useMemo(
+    () => testimonials.concat(testimonials),
+    []
+  );
+
+  // Memoize column configs
+  const columnConfigs = useMemo(
+    () => [
+      { col: 0, speed: 36, offset: 0 },
+      { col: 1, speed: 30, offset: 8 },
+      { col: 2, speed: 42, offset: 16 },
+      { col: 3, speed: 36, offset: 24 },
+      { col: 4, speed: 30, offset: 32 },
+    ],
+    []
+  );
+
   return (
     <section
       className="relative w-full h-[110vh] overflow-hidden"
@@ -61,13 +79,13 @@ export default function Testimonials() {
       }}>
         <div className="mx-auto max-w-[1600px] px-6 h-full">
           <div className="grid h-full grid-cols-1 md:grid-cols-5 gap-8">
-            {[0, 1, 2 , 3, 4].map((col) => (
+            {columnConfigs.map(({ col, speed, offset }) => (
               <FlowColumn
                 key={col}
-                speed={col === 0 ? 36 : col === 1 ? 30 : 42}
-                offset={col * 8}
+                speed={speed}
+                offset={offset}
               >
-                {testimonials.concat(testimonials).map((t, i) => (
+                {duplicatedTestimonials.map((t, i) => (
                   <TestimonialCard key={`${col}-${i}`} {...t} />
                 ))}
               </FlowColumn>
@@ -83,21 +101,18 @@ export default function Testimonials() {
    FLOW COLUMN (SAFE CONTINUOUS)
 ================================ */
 
-function FlowColumn({
-  children,
-  speed,
-  offset,
-}: {
+const FlowColumn = React.memo<{
   children: React.ReactNode;
   speed: number;
   offset: number;
-}) {
+}>(({ children, speed, offset }) => {
   return (
     <div
       className="flow-column"
       style={{
         animationDuration: `${speed}s`,
         animationDelay: `-${offset}s`,
+        willChange: "transform",
       }}
     >
       {children}
@@ -111,6 +126,7 @@ function FlowColumn({
           animation-timing-function: linear;
           animation-iteration-count: infinite;
           will-change: transform;
+          transform: translateZ(0);
         }
 
         .flow-column:hover {
@@ -119,13 +135,15 @@ function FlowColumn({
 
         @keyframes flowUp {
           from {
-            transform: translateY(0);
+            transform: translateY(0) translateZ(0);
           }
           to {
-            transform: translateY(-100%);
+            transform: translateY(-100%) translateZ(0);
           }
         }
       `}</style>
     </div>
   );
-}
+});
+
+FlowColumn.displayName = "FlowColumn";

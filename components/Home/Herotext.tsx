@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import React, { useEffect, useState, useMemo, useCallback } from "react";
 
 type Persona = {
   name: string;
@@ -13,17 +13,43 @@ const PERSONAS: Persona[] = [
   { name: "Aarav", zodiac: "Scorpio", symbol: "♏" },
   { name: "Shubham", zodiac: "Leo", symbol: "♌" },
   { name: "Ishaan", zodiac: "Capricorn", symbol: "♑" },
-];
+] as const;
 
 export default function HeroText() {
   const [index, setIndex] = useState(0);
-  const persona = PERSONAS[index];
+  const persona = useMemo(() => PERSONAS[index], [index]);
 
   useEffect(() => {
-    const id = setInterval(() => {
-      setIndex((i) => (i + 1) % PERSONAS.length);
-    }, 3000);
-    return () => clearInterval(id);
+    let intervalId: NodeJS.Timeout | null = null;
+    
+    const startInterval = () => {
+      intervalId = setInterval(() => {
+        setIndex((i) => (i + 1) % PERSONAS.length);
+      }, 3000);
+    };
+
+    // Start interval only when tab is visible
+    if (document.visibilityState === "visible") {
+      startInterval();
+    }
+
+    const handleVisibilityChange = () => {
+      if (document.visibilityState === "visible") {
+        if (!intervalId) startInterval();
+      } else {
+        if (intervalId) {
+          clearInterval(intervalId);
+          intervalId = null;
+        }
+      }
+    };
+
+    document.addEventListener("visibilitychange", handleVisibilityChange);
+
+    return () => {
+      if (intervalId) clearInterval(intervalId);
+      document.removeEventListener("visibilitychange", handleVisibilityChange);
+    };
   }, []);
 
   return (
@@ -103,7 +129,7 @@ export default function HeroText() {
    Animated Gradient Pill
 ========================= */
 
-function AnimatedPill({ children }: { children: React.ReactNode }) {
+const AnimatedPill = React.memo(({ children }: { children: React.ReactNode }) => {
   return (
     <span
       className="
@@ -116,8 +142,11 @@ function AnimatedPill({ children }: { children: React.ReactNode }) {
         shadow-[0_0_30px_rgba(139,92,246,0.18)]
         transition
       "
+      style={{ willChange: "transform" }}
     >
       {children}
     </span>
   );
-}
+});
+
+AnimatedPill.displayName = "AnimatedPill";

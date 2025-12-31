@@ -37,13 +37,13 @@ const cardMotion = {
   initial: { opacity: 0, y: 40, scale: 0.96 },
   animate: { opacity: 1, y: 0, scale: 1 },
   exit: { opacity: 0, y: -40, scale: 0.96 },
-  transition: { duration: 0.8, ease: [0.25, 1, 0.3, 1] },
+  transition: { duration: 0.8, ease: [0.25, 1, 0.3, 1] as [number, number, number, number] },
 };
 
 const descMotion = {
   initial: { opacity: 0, y: 10 },
   animate: { opacity: 1, y: 0 },
-  transition: { duration: 0.7, delay: 0.15, ease: "easeOut" },
+  transition: { duration: 0.7, delay: 0.15, ease: "easeOut" as const },
 };
 
 const PerfumePlanet = React.memo(function PerfumePlanet() {
@@ -59,8 +59,14 @@ const PerfumePlanet = React.memo(function PerfumePlanet() {
     setIsLoaded(false);
     const img = new window.Image();
     img.src = planet.perfumeImg;
-    img.onload = () => setIsLoaded(true);
-    img.onerror = () => setIsLoaded(true);
+    const handleLoad = () => setIsLoaded(true);
+    const handleError = () => setIsLoaded(true);
+    img.onload = handleLoad;
+    img.onerror = handleError;
+    return () => {
+      img.onload = null;
+      img.onerror = null;
+    };
   }, [planet]);
 
   // Subtle parallax for bottle - simplified without scroll tracking to avoid errors
@@ -132,10 +138,11 @@ const PerfumePlanet = React.memo(function PerfumePlanet() {
                   alt={`${planet.id} perfume`}
                   fill
                   sizes="(max-width:640px) 80vw, 420px"
-                  className="object-contain will-change-transform"
+                  className="object-contain"
                   style={{
                     backfaceVisibility: "hidden",
                     transform: "translateZ(0)",
+                    willChange: "transform",
                   }}
                   priority
                   loading="eager"

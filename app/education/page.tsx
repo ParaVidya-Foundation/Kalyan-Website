@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import { useState } from "react";
 import BookGrid from "@/components/education/Book/BookGrid";
 import EduHeroSection from "@/components/education/Book/eduhero";
 import TestSection from "@/components/education/test/testsection";

@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import { BookmarkCheck, NotebookPen, Sparkles } from "lucide-react";
 import { useRouter } from "next/navigation";
 
@@ -9,23 +9,15 @@ import { DashboardShell } from "@/components/dashboard/dashboard-shell";
 import { QuickActionsPanel } from "@/components/dashboard/quick-actions-panel";
 import { TestCard } from "@/components/cards/test-card";
 import { Button } from "@/components/ui/button";
-import { Skeleton } from "@/components/ui/skeleton";
 import { Badge } from "@/components/ui/badge";
 import type { TestSummary } from "@/lib/dashboard-data";
 import { cn } from "@/lib/utils";
 
 const motionConfig = {
   duration: 0.35,
-  ease: [0.16, 1, 0.3, 1],
+  ease: [0.16, 1, 0.3, 1] as [number, number, number, number],
 } as const;
 
-const sampleQuestion = {
-  prompt:
-    "Which planet currently holds the highest charge in your Navamsa for relational softness?",
-  options: ["Venus exalted", "Moon luminous", "Mercury retrograde", "Saturn patient"],
-  insight:
-    "Mapping these preferences lets the AI layer remedies onto your Saved Papers automatically.",
-};
 
 type TestDashboardProps = {
   tests: TestSummary[];
@@ -34,11 +26,7 @@ type TestDashboardProps = {
 export function TestDashboard({ tests }: TestDashboardProps) {
   const router = useRouter();
 
-  const [stage, setStage] = useState<"idle" | "question" | "result">("idle");
-  const [currentTest, setCurrentTest] = useState<TestSummary | null>(null);
-  const [selected, setSelected] = useState<string | null>(null);
-  const [saved, setSaved] = useState(false);
-  const [booting, setBooting] = useState(true);
+  const [, setBooting] = useState(true);
 
   useEffect(() => {
     const timer = setTimeout(() => setBooting(false), 320);
@@ -85,21 +73,10 @@ export function TestDashboard({ tests }: TestDashboardProps) {
     []
   );
 
-  const startTest = (test: TestSummary) => {
-    setCurrentTest(test);
-    setStage("question");
-    setSelected(null);
-    setSaved(false);
+  const startTest = (_test: TestSummary) => {
+    // Navigate to test page
     router.prefetch("/education/test");
-  };
-
-  const completeTest = () => {
-    setStage("result");
-  };
-
-  const saveResult = () => {
-    setSaved(true);
-    // later connect to Saved Papers API
+    router.push("/education/test");
   };
 
   const goToFullTest = () => {

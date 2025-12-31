@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import { useState, useMemo } from "react";
 import AIBlogGrid from "@/components/research/aiblogs/AIBlogGrid";
 import AIBlogSidebar from "@/components/research/aiblogs/AIBlogSidebar";
 import type { AIBlogCardProps } from "@/components/research/aiblogs/AIBlogCard";
@@ -42,10 +42,10 @@ const demoPosts: AIBlogCardProps[] = [
 ];
 
 export default function AiBlogs() {
-  const [active, setActive] = React.useState<string | undefined>();
+  const [active, setActive] = useState<string | undefined>();
   const categories = ["Insights", "Educational", "Studio", "Projects"];
 
-  const filtered = React.useMemo(
+  const filtered = useMemo(
     () =>
       active
         ? demoPosts.filter(

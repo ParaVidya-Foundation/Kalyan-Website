@@ -1,6 +1,5 @@
 "use client";
 
-import React from "react";
 import BlogLayout, { type BlogArticle } from "@/components/research/blogs/blogpage/bloglayout";
 import RelatedPosts from "@/components/research/blogs/blogpage/relatedpost";
 import RecentPosts from "@/components/research/blogs/blogpage/recentpost";

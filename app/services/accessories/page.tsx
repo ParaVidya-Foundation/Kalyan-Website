@@ -6,21 +6,6 @@ import AccessoriesIdols from "@/components/store/Accessories/Idols";
 import AccessoriesPoojaKit from "@/components/store/Accessories/PoojaKit";
 import AccessoriesRashi from "@/components/store/Accessories/Rashi";
 import Image from "next/image";
-// Gems images as placeholders
-const gemsImages = [
-  "/Gems/Blue-Sapphire.webp",
-  "/Gems/Yellow-Sapphire.webp",
-  "/Gems/Ruby.webp",
-  "/Gems/Green-Emerald.webp",
-  "/Gems/Pearl.webp",
-  "/Gems/Red-Coral.webp",
-  "/Gems/Hessonite.webp",
-  "/Gems/Cats-Eye.webp",
-  "/Gems/White-Sapphire.webp",
-  "/Gems/Amethyst.webp",
-  "/Gems/Moonstone.webp",
-  "/Gems/Peridot.webp",
-];
 
 export default function AccessoriesPage() {
 

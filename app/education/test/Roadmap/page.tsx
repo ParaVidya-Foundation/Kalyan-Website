@@ -1,6 +1,5 @@
 "use client";
 
-import React from "react";
 import Roadmap from "@/components/education/test/Roadmap";
 
 export default function RoadmapPage() {

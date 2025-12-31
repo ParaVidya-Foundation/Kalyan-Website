@@ -100,21 +100,21 @@ Each special Lagna yields a different Bhava chart, and their combined analysis g
                 <ReactMarkdown
                   remarkPlugins={[remarkGfm]}
                   components={{
-                    strong: ({ children }) => (
+                    strong: ({ children }: { children?: React.ReactNode }) => (
                       <strong className="font-semibold text-gray-900">
                         {children}
                       </strong>
                     ),
-                    em: ({ children }) => (
+                    em: ({ children }: { children?: React.ReactNode }) => (
                       <em className="italic text-gray-700">{children}</em>
                     ),
-                    ul: ({ children }) => (
+                    ul: ({ children }: { children?: React.ReactNode }) => (
                       <ul className="list-disc ml-5 space-y-1">{children}</ul>
                     ),
-                    li: ({ children }) => (
+                    li: ({ children }: { children?: React.ReactNode }) => (
                       <li className="text-gray-800">{children}</li>
                     ),
-                    p: ({ children }) => (
+                    p: ({ children }: { children?: React.ReactNode }) => (
                       <p className="mb-2 last:mb-0">{children}</p>
                     ),
                   }}

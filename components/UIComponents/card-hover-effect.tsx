@@ -44,7 +44,7 @@ export function HoverEffect({
           initial={false}
           whileHover={{ y: -6, scale: 1.015 }}
           whileTap={{ scale: 0.992 }}
-          transition={{ duration: 0.22, ease: [0.19, 1, 0.22, 1] }}
+          transition={{ duration: 0.22, ease: [0.19, 1, 0.22, 1] as [number, number, number, number] }}
           className="relative h-full will-change-transform"
         >
           <AnimatedCard item={item} active={hoveredIndex === idx} />

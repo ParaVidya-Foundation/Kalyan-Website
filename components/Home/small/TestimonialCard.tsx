@@ -8,7 +8,7 @@ type TestimonialCardProps = {
   role: string;
 };
 
-export const TestimonialCard: React.FC<TestimonialCardProps> = ({
+export const TestimonialCard: React.FC<TestimonialCardProps> = React.memo(({
   quote,
   name,
   role,
@@ -52,11 +52,13 @@ export const TestimonialCard: React.FC<TestimonialCardProps> = ({
           transition:
             transform 0.4s cubic-bezier(0.19, 1, 0.22, 1),
             box-shadow 0.4s ease;
+          will-change: transform;
+          transform: translateZ(0);
         }
 
-        /* Hover lift */
+        /* Hover lift - GPU-accelerated */
         .testimonial-card:hover {
-          transform: translateY(-6px);
+          transform: translateY(-6px) translateZ(0);
           box-shadow:
             0 40px 120px rgba(0, 0, 0, 0.6),
             inset 0 0 0 1px rgba(255, 200, 90, 0.25);
@@ -136,6 +138,8 @@ export const TestimonialCard: React.FC<TestimonialCardProps> = ({
       `}} />
     </article>
   );
-};
+});
+
+TestimonialCard.displayName = "TestimonialCard";
 
 export default TestimonialCard;

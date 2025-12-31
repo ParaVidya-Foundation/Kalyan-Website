@@ -36,7 +36,7 @@ export default function AIBlogCard({
       viewport={{ once: true }}
       transition={{
         duration: 0.7,
-        ease: [0.22, 1, 0.36, 1],
+        ease: [0.22, 1, 0.36, 1] as [number, number, number, number],
       }}
       whileHover={{ y: -8 }}
       className="group relative mx-auto flex max-w-2xl flex-col gap-5 overflow-hidden bg-transparent font-mono transition-all duration-700"
@@ -53,7 +53,7 @@ export default function AIBlogCard({
             whileHover={{ scale: 1.03 }}
             transition={{
               duration: 0.9,
-              ease: [0.19, 1, 0.22, 1],
+              ease: [0.19, 1, 0.22, 1] as [number, number, number, number],
             }}
             className="relative w-full h-full"
           >

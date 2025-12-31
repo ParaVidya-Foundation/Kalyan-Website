@@ -1,7 +1,7 @@
 // components/research/blogs/blogpage/bloglayout.tsx
 "use client";
 
-import React from "react";
+import React, { useMemo } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { format } from "date-fns";
@@ -25,11 +25,39 @@ interface BlogLayoutProps {
   post: BlogArticle;
 }
 
+// Memoized section component to prevent re-renders
+const BlogSection = React.memo<{
+  section: { heading: string; paragraphs: string[] };
+  index: number;
+}>(({ section, index }) => (
+  <motion.div
+    initial={{ opacity: 0, y: 30 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true }}
+    transition={{ delay: index * 0.1 }}
+    style={{ willChange: "transform, opacity" }}
+  >
+    <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mt-16 mb-6 first:mt-0">
+      {section.heading}
+    </h2>
+    {section.paragraphs.map((paragraph, j) => (
+      <p key={j} className="text-gray-700 leading-relaxed text-lg mb-6">
+        {paragraph}
+      </p>
+    ))}
+  </motion.div>
+));
+
+BlogSection.displayName = "BlogSection";
+
 export default function BlogLayout({ post }: BlogLayoutProps) {
-  const formattedDate =
-    typeof post.date === "string"
-      ? post.date
-      : format(new Date(post.date), "d MMM yyyy");
+  const formattedDate = useMemo(
+    () =>
+      typeof post.date === "string"
+        ? post.date
+        : format(new Date(post.date), "d MMM yyyy"),
+    [post.date]
+  );
 
   return (
     <div className="max-w-7xl mx-auto px-6">
@@ -49,6 +77,7 @@ export default function BlogLayout({ post }: BlogLayoutProps) {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight max-w-5xl"
+        style={{ willChange: "transform, opacity" }}
       >
         {post.title}
       </motion.h1>
@@ -74,6 +103,7 @@ export default function BlogLayout({ post }: BlogLayoutProps) {
         animate={{ opacity: 1, scale: 1 }}
         transition={{ delay: 0.2 }}
         className="relative mt-12 w-full aspect-square lg:aspect-square rounded-2xl overflow-hidden shadow-xl"
+        style={{ willChange: "transform, opacity" }}
       >
         <Image
           src={post.content.featuredGraphic.image}
@@ -81,6 +111,7 @@ export default function BlogLayout({ post }: BlogLayoutProps) {
           fill
           priority
           className="object-cover"
+          style={{ transform: "translateZ(0)" }}
         />
         
       </motion.div>
@@ -88,22 +119,7 @@ export default function BlogLayout({ post }: BlogLayoutProps) {
         {/* Article Content */}
         <article className="mt-16 prose prose-lg max-w-none lg:prose-xl">
           {post.content.sections.map((section, i) => (
-            <motion.div
-              key={i}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.1 }}
-            >
-              <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mt-16 mb-6 first:mt-0">
-                {section.heading}
-              </h2>
-              {section.paragraphs.map((paragraph, j) => (
-                <p key={j} className="text-gray-700 leading-relaxed text-lg mb-6">
-                  {paragraph}
-                </p>
-              ))}
-            </motion.div>
+            <BlogSection key={i} section={section} index={i} />
           ))}
       </article>
     </div>

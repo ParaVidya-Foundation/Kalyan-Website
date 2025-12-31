@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useRef } from "react";
+import React, { useRef, useCallback, useMemo } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
@@ -11,17 +11,63 @@ interface RelatedPostsProps {
   posts: BlogCardProps[];
 }
 
+// Memoized post card component
+const RelatedPostCard = React.memo<{
+  post: BlogCardProps;
+  index: number;
+}>(({ post, index }) => (
+  <motion.div
+    initial={{ opacity: 0, x: 20 }}
+    whileInView={{ opacity: 1, x: 0 }}
+    viewport={{ once: true }}
+    transition={{ duration: 0.4, delay: index * 0.1 }}
+    className="flex-shrink-0 w-72 sm:w-80"
+    style={{ willChange: "transform, opacity" }}
+  >
+    <Link
+      href={post.href || `/research/blogs/${post.id || "BlogPage"}`}
+      className="block group"
+      aria-label={`Read related post: ${post.title}`}
+    >
+      {/* Card */}
+      <div className="bg-white rounded-lg border border-gray-200 overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 group-hover:-translate-y-1">
+        {/* Image */}
+        <div className="relative w-full aspect-square overflow-hidden bg-gray-100">
+          <Image
+            src={post.image}
+            alt={post.imageAlt}
+            fill
+            sizes="(max-width: 640px) 288px, 320px"
+            className="object-cover group-hover:scale-105 transition-transform duration-300"
+            loading="lazy"
+            style={{ transform: "translateZ(0)", willChange: "transform" }}
+          />
+        </div>
+
+        {/* Title */}
+        <div className="p-4">
+          <h3 className="text-base sm:text-lg font-semibold text-gray-900 line-clamp-2 group-hover:text-sky-600 transition-colors">
+            {post.title}
+          </h3>
+        </div>
+      </div>
+    </Link>
+  </motion.div>
+));
+
+RelatedPostCard.displayName = "RelatedPostCard";
+
 export default function RelatedPosts({ posts }: RelatedPostsProps) {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
 
-  const scrollRight = () => {
+  const scrollRight = useCallback(() => {
     if (scrollContainerRef.current) {
       scrollContainerRef.current.scrollBy({
         left: 300,
         behavior: "smooth",
       });
     }
-  };
+  }, []);
 
   if (posts.length === 0) {
     return null;
@@ -45,42 +91,7 @@ export default function RelatedPosts({ posts }: RelatedPostsProps) {
           className="flex gap-4 sm:gap-6 overflow-x-auto scrollbar-hide pb-4 scroll-smooth"
         >
           {posts.map((post, index) => (
-            <motion.div
-              key={post.id}
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: index * 0.1 }}
-              className="flex-shrink-0 w-72 sm:w-80"
-            >
-              <Link
-                href={post.href || `/research/blogs/${post.id || "BlogPage"}`}
-                className="block group"
-                aria-label={`Read related post: ${post.title}`}
-              >
-                {/* Card */}
-                <div className="bg-white rounded-lg border border-gray-200 overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 group-hover:-translate-y-1">
-                  {/* Image */}
-                  <div className="relative w-full aspect-square overflow-hidden bg-gray-100">
-                    <Image
-                      src={post.image}
-                      alt={post.imageAlt}
-                      fill
-                      sizes="(max-width: 640px) 288px, 320px"
-                      className="object-cover group-hover:scale-105 transition-transform duration-300"
-                      loading="lazy"
-                    />
-                  </div>
-
-                  {/* Title */}
-                  <div className="p-4">
-                    <h3 className="text-base sm:text-lg font-semibold text-gray-900 line-clamp-2 group-hover:text-sky-600 transition-colors">
-                      {post.title}
-                    </h3>
-                  </div>
-                </div>
-              </Link>
-            </motion.div>
+            <RelatedPostCard key={post.id} post={post} index={index} />
           ))}
         </div>
 

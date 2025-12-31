@@ -1,6 +1,5 @@
 "use client";
 
-import React from "react";
 import Quiz from "@/components/education/test/Quiz";
 
 export default function TopicPage() {
