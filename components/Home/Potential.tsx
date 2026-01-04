@@ -74,6 +74,13 @@ export default function Potential() {
                 src={src}
                 alt=""
                 className="h-9 w-9 rounded-full border border-black/50 object-cover"
+                onError={(e) => {
+                  const target = e.target as HTMLImageElement;
+                  target.style.display = 'none';
+                  // Suppress 404 error in console
+                  e.stopPropagation();
+                }}
+                loading="lazy"
               />
             ))}
             <div className="flex h-9 w-9 items-center justify-center rounded-full bg-white/10 text-xs text-white">

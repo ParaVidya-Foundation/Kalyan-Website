@@ -1,11 +1,12 @@
-import type React from "react"
+import React from "react"
 import type { Viewport } from "next"
 import { Cormorant_Garamond, Inter } from "next/font/google"
 import "./globals.css"
-import { Footer } from "@/components/layout/Footer"
+import Footer from "@/components/layout/Footer"
 import { StructuredData } from "@/components/structured-data"
 import { generateSEO, generateOrganizationSchema, generateWebsiteSchema } from "@/lib/seo-utils"
 import Header from "@/components/layout/Header"
+
 
 const cormorant = Cormorant_Garamond({
   subsets: ["latin"],
@@ -52,6 +53,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode
 }>) {
+  
   return (
     <html lang="en">
       <head>
@@ -64,6 +66,7 @@ export default function RootLayout({
         <Header />
         {children}
         <Footer />
+       
       </body>
     </html>
   )

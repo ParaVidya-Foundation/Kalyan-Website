@@ -47,9 +47,14 @@ const CHOICES: ChoiceItem[] = [
 
 export function ShopByChoice() {
   const [activeIndex, setActiveIndex] = useState(0);
+  const [imageErrors, setImageErrors] = useState<Set<string>>(new Set());
 
   const words = useMemo(() => CHOICES.map((c) => c.label), []);
   const activeItem = CHOICES[activeIndex];
+
+  const handleImageError = (imagePath: string) => {
+    setImageErrors((prev) => new Set(prev).add(imagePath));
+  };
 
   return (
     <section className="relative mx-auto flex min-h-[70vh] max-w-7xl items-center px-6">
@@ -117,14 +122,32 @@ export function ShopByChoice() {
                 transition={{ duration: 0.5, ease: "easeOut" }}
                 className="absolute inset-0"
               >
-                <Image
-                  src={activeItem.image}
-                  alt={activeItem.label}
-                  fill
-                  priority={activeIndex === 0}
-                  sizes="(max-width: 768px) 280px, 420px"
-                  className="object-contain"
-                />
+                {!imageErrors.has(activeItem.image) ? (
+                  <Image
+                    src={activeItem.image}
+                    alt={activeItem.label}
+                    fill
+                    priority={activeIndex === 0}
+                    sizes="(max-width: 768px) 280px, 420px"
+                    className="object-contain"
+                    onError={(e) => {
+                      handleImageError(activeItem.image);
+                      // Suppress 404 error in console
+                      e.stopPropagation();
+                    }}
+                    onLoad={(e) => {
+                      const img = e.currentTarget;
+                      if (img.naturalWidth === 0 || img.naturalHeight === 0) {
+                        handleImageError(activeItem.image);
+                      }
+                    }}
+                    unoptimized
+                  />
+                ) : (
+                  <div className="flex items-center justify-center h-full text-neutral-400 text-sm font-medium">
+                    {activeItem.label}
+                  </div>
+                )}
               </motion.div>
             </AnimatePresence>
 

@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useMemo, useCallback } from "react";
+import React, { useState, useMemo, useCallback, useRef } from "react";
 
 type VideoMap = Record<string, string>;
 
@@ -39,6 +39,8 @@ const VIDEO_MAP: VideoMap = {
 
 export default function AstrologyTypes() {
   const [activeKey, setActiveKey] = useState<string>("Lal Kitab");
+  const [videoError, setVideoError] = useState(false);
+  const videoRef = useRef<HTMLVideoElement>(null);
 
   const activeVideo = useMemo(
     () => VIDEO_MAP[activeKey],
@@ -47,6 +49,11 @@ export default function AstrologyTypes() {
 
   const handleKeyChange = useCallback((key: string) => {
     setActiveKey(key);
+    setVideoError(false);
+  }, []);
+
+  const handleVideoError = useCallback(() => {
+    setVideoError(true);
   }, []);
 
   return (
@@ -98,16 +105,39 @@ export default function AstrologyTypes() {
 
         {/* RIGHT — VIDEO PANEL */}
         <div className="relative h-[420px] w-full overflow-hidden rounded-2xl bg-neutral-100 shadow-[0_40px_120px_rgba(0,0,0,0.12)]">
-          <video
-            key={activeVideo}
-            src={activeVideo}
-            autoPlay
-            muted
-            loop
-            playsInline
-            className="h-full w-full object-cover animate-videoFade"
-            style={{ willChange: "transform, opacity" }}
-          />
+          {!videoError ? (
+            <video
+              ref={videoRef}
+              key={activeVideo}
+              src={activeVideo}
+              autoPlay
+              muted
+              loop
+              playsInline
+              className="h-full w-full object-cover animate-videoFade"
+              style={{ willChange: "transform, opacity" }}
+              onError={(e) => {
+                handleVideoError();
+                // Suppress 404 error in console
+                e.stopPropagation();
+                e.preventDefault();
+              }}
+              onLoadStart={() => {
+                // Check if video can actually load
+                if (videoRef.current) {
+                  const handleError = () => {
+                    handleVideoError();
+                    videoRef.current?.removeEventListener('error', handleError);
+                  };
+                  videoRef.current.addEventListener('error', handleError, { once: true });
+                }
+              }}
+            />
+          ) : (
+            <div className="flex items-center justify-center h-full text-neutral-400 text-sm font-medium">
+              Video unavailable
+            </div>
+          )}
 
           {/* Soft overlay */}
           <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/10 via-transparent to-transparent" />

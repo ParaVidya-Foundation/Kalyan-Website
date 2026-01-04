@@ -19,10 +19,11 @@ export default function TestPage() {
     </section>
     <div className="flex justify-center relative w-full">
           <TestSection onSubmitEmail={() => {
-            // Handle email submission
+            // Handle email submission - ready for API integration
             if (process.env.NODE_ENV === "development") {
-              console.log("Email submitted");
+              console.debug("Email submitted");
             }
+            // TODO: Implement API call for email submission
           }} />
         </div>
         </>

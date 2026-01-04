@@ -1,10 +1,12 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import { PlaceholdersAndVanishInput } from "../ui/placeholders-and-vanish-input";
 
 export function Complex() {
+  const [imageError, setImageError] = useState(false);
+  
   const placeholders = [
     "What does my Lagna lord indicate in career?",
     "How to analyze Mahadasha–Antardasha results?",
@@ -15,12 +17,19 @@ export function Complex() {
   ];
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    console.log(e.target.value);
+    // Input change handler - ready for API integration
+    if (process.env.NODE_ENV === "development") {
+      console.debug("Input changed:", e.target.value);
+    }
   };
 
   const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log("submitted");
+    // Form submission handler - ready for API integration
+    if (process.env.NODE_ENV === "development") {
+      console.debug("Form submitted");
+    }
+    // TODO: Implement API call for form submission
   };
 
   return (
@@ -73,13 +82,31 @@ export function Complex() {
               shadow-[0_40px_120px_rgba(168,85,247,0.25)]
             "
           >
-            <Image
-              src="/images/complex.png"
-              alt="Complex Astrology Visualization"
-              fill
-              priority
-              className="object-contain"
-            />
+            {!imageError ? (
+              <Image
+                src="/images/complex.png"
+                alt="Complex Astrology Visualization"
+                fill
+                priority
+                className="object-contain"
+                onError={(e) => {
+                  setImageError(true);
+                  // Suppress 404 error in console
+                  e.stopPropagation();
+                }}
+                onLoad={(e) => {
+                  const img = e.currentTarget;
+                  if (img.naturalWidth === 0 || img.naturalHeight === 0) {
+                    setImageError(true);
+                  }
+                }}
+                unoptimized
+              />
+            ) : (
+              <div className="flex items-center justify-center h-full text-neutral-400 text-sm font-medium">
+                Visualization unavailable
+              </div>
+            )}
 
             <div
               aria-hidden

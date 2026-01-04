@@ -12,7 +12,12 @@ export default function Error({
   reset: () => void
 }) {
   useEffect(() => {
-    console.error("[v0] Error boundary:", error)
+    // Log error for monitoring (production-safe)
+    if (process.env.NODE_ENV === "development") {
+      console.error("[Error Boundary]:", error);
+    }
+    // In production, send to error tracking service (e.g., Sentry, LogRocket)
+    // Example: Sentry.captureException(error);
   }, [error])
 
   return (

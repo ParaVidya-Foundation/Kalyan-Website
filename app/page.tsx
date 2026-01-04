@@ -9,6 +9,9 @@ import Download from "@/components/Home/download"
 import Testimonials from "@/components/Home/Testimonials"
 import AstrologyTypes from "@/components/Home/AstrologyTypes"
 import Shop from "@/components/Home/Shop"
+import { BlogBento } from "@/components/Home/BlogBento"
+import Image from "next/image"
+
 export const metadata: Metadata = generateSEO({
   title: "Vedic Astrology | Ancient Wisdom for Modern Life | Jyotish",
   description:
@@ -35,7 +38,17 @@ export default function HomePage() {
     <Download />
     <AstrologyTypes />
     <Shop />
+    <BlogBento />
     <Testimonials />
+
+          {/* Visual anchor above footer */}
+          <Image
+        src="/footer.png"
+        alt="Kalyan cosmic footer backdrop"
+        width={2400}
+        height={800}
+        className="w-full h-auto"
+      />
     </main>
   )
 }
