@@ -9,14 +9,14 @@ export default function TestPage() {
     <>
     <section
       className="relative flex flex-col items-center justify-center min-h-screen overflow-hidden 
-                 bg-gradient-to-br from-[#fafafa] via-[#f6f6ff] to-[#fff] text-black font-[Inter]"
+                 text-black font-[Inter]"
     >
 
      <TestHero />
 
      <SubjectCard />
       
-    </section>
+
     <div className="flex justify-center relative w-full">
           <TestSection onSubmitEmail={() => {
             // Handle email submission - ready for API integration
@@ -26,6 +26,7 @@ export default function TestPage() {
             // TODO: Implement API call for email submission
           }} />
         </div>
+        </section>
         </>
   );
 }

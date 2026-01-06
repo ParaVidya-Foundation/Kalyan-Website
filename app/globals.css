@@ -3,6 +3,12 @@
 
 @custom-variant dark (&:is(.dark *));
 
+
+body{
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
 /* ---------- Scrollbar: width ---------- */
 body::-webkit-scrollbar {
   width: 0.6rem;

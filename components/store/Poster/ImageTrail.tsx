@@ -1,5 +1,20 @@
 "use client";
 import React, { useEffect, useRef, useCallback } from "react";
+import { Playfair_Display, Lato } from "next/font/google";
+
+const playfair = Playfair_Display({
+  weight: ["400", "600", "700"],
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-playfair",
+});
+
+const lato = Lato({
+  weight: ["400", "700"],
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-lato",
+});
 
 type Props = {
   images?: string[];
@@ -163,7 +178,7 @@ export default function ImageTrail({
   }, [images, maxSprites, spriteSize, lifeMs, inertia, animate, updateBounds]);
 
   return (
-    <section className="trail-hero" ref={heroRef}>
+    <section className={`trail-hero ${playfair.variable} ${lato.variable}`} ref={heroRef}>
       <div className="trail-content">
         <h1>{headline}</h1>
         <p>{subline}</p>
@@ -196,7 +211,7 @@ export default function ImageTrail({
         }
 
         h1 {
-          font-family: "Playfair Display", serif;
+          font-family: var(--font-playfair), "Playfair Display", serif;
           font-size: clamp(2.5rem, 4vw, 4.2rem);
           background: linear-gradient(120deg, #d8b385, #e9cda3);
           -webkit-background-clip: text;
@@ -206,7 +221,7 @@ export default function ImageTrail({
         }
 
         p {
-          font-family: "Lato", sans-serif;
+          font-family: var(--font-lato), "Lato", sans-serif;
           font-size: clamp(1rem, 1.2vw, 1.3rem);
           color: #444;
           line-height: 1.6;

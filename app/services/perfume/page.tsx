@@ -10,7 +10,7 @@ import PerfumeZodiacGrid from "@/components/store/Perfume/PerfumeZodiacGrid";
 
 export default function PerfumePage() {
   return (
-    <div className="relative w-full overflow-visible [--header-h:30px] [--hero-h:110vh]">
+    <div className="relative w-full overflow-visible [--header-h:70px] [--hero-h:110vh]">
       {/* ====================== GLOBAL BACKGROUND ====================== */}
       <div className="absolute inset-0 -z-10">
         <MovingGradient />

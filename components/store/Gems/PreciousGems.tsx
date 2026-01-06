@@ -2,6 +2,14 @@
 import React from "react";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
+import { Lato } from "next/font/google";
+
+const lato = Lato({
+  weight: ["400", "700"],
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-lato",
+});
 
 interface GemData {
   name: string;
@@ -32,7 +40,6 @@ export default function PreciousGems() {
   return (
     <>
       <style jsx>{`
-        @import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap");
         * {
           margin: 0;
           padding: 0;
@@ -43,7 +50,7 @@ export default function PreciousGems() {
           width: calc(min(76.5rem, 90%));
           margin-inline: auto;
           color: #111;
-          font-family: "Lato", sans-serif;
+          font-family: var(--font-lato), "Lato", sans-serif;
         }
         section h2 {
           text-transform: capitalize;
@@ -242,11 +249,7 @@ export default function PreciousGems() {
           box-shadow: none;
         }
       `}</style>
-      <link
-        rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
-      />
-      <section>
+      <section className={lato.variable}>
         <h2>Precious Gems Collection</h2>
         <div className="container">
           {PreciousStone.map((gem, i) => (
@@ -278,15 +281,31 @@ export default function PreciousGems() {
                   </div>
                   <div className="icon">
                     <a
-                      href={`/store/gems/Product?id=${i + 1}`}
+                      href={`/login`}
                       className="iconBox"
                       aria-label={`View ${gem.name}`}
                       onClick={(event) => {
                         event.preventDefault();
-                        router.push(`/store/gems/Product?id=${i + 1}`);
+                        router.push(`/login`);
                       }}
                     >
-                      <span className="material-symbols-outlined">arrow_forward</span>
+                      <span>
+                        <svg
+                          width="36"
+                          height="36"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M5 12H19M19 12L12 5M19 12L12 19"
+                            stroke="currentColor"
+                            strokeWidth="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          />
+                        </svg>
+                      </span>
                     </a>
                   </div>
                 </div>
@@ -304,7 +323,7 @@ export default function PreciousGems() {
                 </div>
                 <button
                   className="buy-button"
-                  onClick={() => router.push(`/store/gems/Product?id=${i + 1}`)}
+                  onClick={() => router.push(`/login`)}
                 >
                   Buy Now
                 </button>

@@ -83,10 +83,10 @@ export default function RelatedProducts({
         {products.map((p, i) => {
           // Determine product page based on image path or product type
           const getProductPath = () => {
-            if (p.image?.includes('/Gems/')) return `/store/gems/Product?id=${p.id}`;
+            if (p.image?.includes('/Gems/')) return `/login?id=${p.id}`;
             if (p.image?.includes('/Poster/')) return `/store/poster/Product?id=${p.id}`;
             if (p.image?.includes('/Accessories/')) return `/store/accessories/Product?id=${p.id}`;
-            return `/store/gems/Product?id=${p.id}`; // default
+            return `/login?id=${p.id}`; // default
           };
 
           return (

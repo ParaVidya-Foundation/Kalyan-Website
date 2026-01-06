@@ -123,7 +123,7 @@ export default function PosterHero({
   return (
     <motion.section
       aria-label="Poster hero"
-      className={combinedClassName}
+      className={combinedClassName + " rounded-b-[36px]"}
       style={{ backgroundColor: bgColors[bgIndex] || bgColors[0] || "#F5C6EC" }}
       animate={{ backgroundColor: bgColors[bgIndex] || bgColors[0] || "#F5C6EC" }}
       transition={{ duration: 1.8, ease: "easeInOut" }}

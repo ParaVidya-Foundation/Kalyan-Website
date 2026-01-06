@@ -42,7 +42,7 @@ const EduHeroSection: React.FC<EduHeroSectionProps> = ({ onSearchChange }) => {
         className="absolute inset-0 rounded-b-[25px] bg-gradient-to-t from-blue-100 via-white/40 to-transparent"
       />
 
-      <div className="relative mx-auto max-w-5xl px-6 text-center">
+      <div className="relative mx-auto mt-14 max-w-5xl px-6 text-center">
         {/* Foundation badge */}
         <div className="inline-flex items-center gap-2 rounded-full border border-blue-200/70 bg-white/80 px-3 py-1 text-xs font-medium text-gray-700 backdrop-blur-sm shadow-sm">
           <a

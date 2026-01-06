@@ -35,8 +35,7 @@ export default function TestHero() {
         aria-hidden="true"
       >
         <Orb
-         
-         
+
           hoverIntensity={0.8}
           rotateOnHover
           hue={220}

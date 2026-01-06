@@ -39,7 +39,7 @@ export function Navbar({ className }: { className?: string }) {
 </Link>
 
 
-      <Menu setActive={setActive}>
+      <Menu active={active} setActive={setActive}>
         {/* LEFT */}
         <MenuItem setActive={setActive} active={active} item="Research">
           <div className="flex flex-col space-y-3 text-sm font-mono">
