@@ -51,26 +51,7 @@ export default function Loading() {
         </div>
       </div>
 
-      {/* Keyframes */}
-      <style dangerouslySetInnerHTML={{
-        __html: `
-        @keyframes spin {
-          from { transform: rotate(0deg); }
-          to { transform: rotate(360deg); }
-        }
-
-        @keyframes gradientMove {
-          0% { background-position: 0% 50%; }
-          50% { background-position: 100% 50%; }
-          100% { background-position: 0% 50%; }
-        }
-
-        @keyframes pulseGlow {
-          0%, 100% { opacity: 0.4; }
-          50% { opacity: 0.7; }
-        }
-      `
-      }} />
+      {/* Keyframes moved to globals.css for better performance */}
     </main>
   );
 }

@@ -1,5 +1,7 @@
 import React from "react";
 import { PerfumeCard, type Perfume } from "./PerfumeCard";
+import { StructuredData } from "@/components/structured-data";
+import type { WithContext, Thing } from "schema-dts";
 
 /** Your 8 products */
 const perfumes: Perfume[] = [
@@ -78,25 +80,25 @@ const perfumes: Perfume[] = [
 ];
 
 const PerfumeZodiacGrid = React.memo(function PerfumeZodiacGrid() {
-  const jsonLd = {
+  const jsonLd: WithContext<Thing> = {
     "@context": "https://schema.org",
-    "@type": "ItemList",
+    "@type": "ItemList" as const,
     itemListElement: perfumes.map((p, i) => ({
-      "@type": "ListItem",
+      "@type": "ListItem" as const,
       position: i + 1,
       item: {
-        "@type": "Product",
+        "@type": "Product" as const,
         name: p.name,
         image: p.images,
         offers: {
-          "@type": "Offer",
+          "@type": "Offer" as const,
           priceCurrency: "USD",
           price: p.price.toFixed(2),
           availability: "https://schema.org/InStock",
         },
       },
     })),
-  };
+  } as WithContext<Thing>;
 
   const handleAddToCart = React.useCallback((id: number) => {
     // Add to cart functionality (noop in prod, logs in dev)
@@ -118,10 +120,7 @@ const PerfumeZodiacGrid = React.memo(function PerfumeZodiacGrid() {
   return (
     <section className="w-full">
       <h1 className="sr-only">Perfume Collection</h1>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
+      <StructuredData data={jsonLd} />
 
       {/* full-width brutalist + glassmorphism grid */}
       <ul

@@ -208,8 +208,18 @@ export function HoveredLink(props: React.AnchorHTMLAttributes<HTMLAnchorElement>
 }
 
 export function ProductItem({ title, description, href, src }: { title: string; description: string; href: string; src: string }) {
+  // Check if href is external (starts with http:// or https://)
+  const isExternal = href.startsWith('http://') || href.startsWith('https://');
+  const linkProps = isExternal 
+    ? { rel: 'noopener noreferrer', target: '_blank' as const }
+    : {};
+  
   return (
-    <a href={href} className="group flex gap-4 rounded-xl p-3 hover:bg-black/5 transition">
+    <a 
+      href={href} 
+      className="group flex gap-4 rounded-xl p-3 hover:bg-black/5 transition"
+      {...linkProps}
+    >
       <Image src={src} alt={title} width={88} height={60} className="rounded-lg object-cover" />
       <div>
         <h4 className="text-sm font-semibold text-black">{title}</h4>

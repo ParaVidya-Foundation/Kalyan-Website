@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { format } from "date-fns";
+import { StructuredData } from "@/components/structured-data";
 
 export interface BlogCardProps {
   id: string;
@@ -169,26 +170,23 @@ export const BlogCard: React.FC<BlogCardProps> = ({
         }}
       />
 
-      {/* Structured Data */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "BlogPosting",
-            "@id": blogUrl,
-            headline: title,
-            image: image,
-            datePublished:
-              typeof date === "string"
-                ? date
-                : format(new Date(date), "yyyy-MM-dd"),
-            author: author
-              ? { "@type": "Person", name: author }
-              : undefined,
-            description: excerpt,
-            url: blogUrl,
-          }),
+      {/* Structured Data - using safe component instead of dangerouslySetInnerHTML */}
+      <StructuredData
+        data={{
+          "@context": "https://schema.org",
+          "@type": "BlogPosting",
+          "@id": blogUrl,
+          headline: title,
+          image: image,
+          datePublished:
+            typeof date === "string"
+              ? date
+              : format(new Date(date), "yyyy-MM-dd"),
+          author: author
+            ? { "@type": "Person", name: author }
+            : undefined,
+          description: excerpt,
+          url: blogUrl,
         }}
       />
     </motion.article>

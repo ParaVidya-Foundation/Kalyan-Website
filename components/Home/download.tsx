@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import Applinks from "./small/Applinks";
 
 export default function Download() {
@@ -15,30 +16,30 @@ export default function Download() {
             <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(circle_at_center,rgba(168,85,247,0.35),transparent_65%)]" />
 
             {/* Rotating celestial ring */}
-            <img
-              src="/apptry.png"
-              alt="Celestial ring"
-              className="
-                absolute
-                w-[520px]
-                max-w-none
-                opacity-90
-                animate-spinSlow
-                will-change-transform
-              "
-            />
+            <div className="absolute w-[520px] h-[520px] opacity-90 animate-spinSlow will-change-transform">
+              <Image
+                src="/apptry.png"
+                alt="Celestial ring"
+                fill
+                className="object-contain"
+                sizes="520px"
+                loading="lazy"
+                unoptimized
+              />
+            </div>
 
             {/* Phone mockup */}
-            <img
-              src="/app.png"
-              alt="Astrology App Preview"
-              className="
-                relative z-10
-                w-[360px] sm:w-[400px]
-                drop-shadow-[0_0_120px_rgba(168,85,247,0.55)]
-                will-change-transform
-              "
-            />
+            <div className="relative z-10 w-[360px] sm:w-[400px] h-auto drop-shadow-[0_0_120px_rgba(168,85,247,0.55)] will-change-transform">
+              <Image
+                src="/app.png"
+                alt="Astrology App Preview"
+                width={400}
+                height={800}
+                className="w-full h-auto"
+                sizes="(max-width: 640px) 360px, 400px"
+                priority
+              />
+            </div>
           </div>
 
           {/* RIGHT — CONTENT */}
@@ -66,22 +67,7 @@ export default function Download() {
         </div>
       </div>
 
-      {/* Animations */}
-      <style dangerouslySetInnerHTML={{
-        __html: `
-        @keyframes spinSlow {
-          from {
-            transform: rotate(0deg);
-          }
-          to {
-            transform: rotate(360deg);
-          }
-        }
-
-        .animate-spinSlow {
-          animation: spinSlow 40s linear infinite;
-        }
-      `}} />
+      {/* Keyframes moved to globals.css for better performance */}
     </section>
   );
 }

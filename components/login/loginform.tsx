@@ -45,13 +45,19 @@ export default function LoginForm({ onSwitch, onSuccessRedirect }: Props) {
     [email, password, redirectUrl]
   );
 
-  const oauth = (provider: "google" | "apple" | "github") => {
-    window.open(
+  // Memoized OAuth handler to prevent re-renders
+  const oauth = useCallback((provider: "google" | "apple" | "github") => {
+    // Security: window.open with noopener equivalent via window features
+    const popup = window.open(
       `/api/auth/oauth/${provider}`,
       `_oauth_${provider}`,
-      "width=720,height=720"
+      "width=720,height=720,noopener,noreferrer"
     );
-  };
+    // Additional security: ensure opener is null
+    if (popup) {
+      popup.opener = null;
+    }
+  }, []);
 
   return (
     <div className="mx-auto w-full max-w-md rounded-2xl border border-white/30 bg-white/70 p-6 shadow-xl backdrop-blur-md">

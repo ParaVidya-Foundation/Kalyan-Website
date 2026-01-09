@@ -33,3 +33,59 @@
     font-family: var(--font-playfair), "Playfair Display", serif;
   }
 }
+
+/* Performance-optimized keyframes moved from dangerouslySetInnerHTML */
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes pulseSlow {
+  0%, 100% { opacity: 0.45; }
+  50% { opacity: 0.7; }
+}
+
+@keyframes spinSlow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.animate-gradientMove {
+  animation: gradientMove 6s ease infinite;
+}
+
+.animate-pulseSlow {
+  animation: pulseSlow 7s ease-in-out infinite;
+}
+
+.animate-spinSlow {
+  animation: spinSlow 40s linear infinite;
+}
+
+/* Additional keyframes for loading and animations */
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes pulseGlow {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 0.7; }
+}
+
+/* Animated gradient text class */
+.animated-gradient-text {
+  background: linear-gradient(
+    120deg,
+    #f472b6,
+    #c084fc,
+    #818cf8,
+    #f472b6
+  );
+  background-size: 300% 300%;
+  animation: gradientMove 6s ease infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}

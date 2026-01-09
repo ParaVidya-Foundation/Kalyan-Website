@@ -75,6 +75,10 @@ export default function Header(): React.ReactElement {
 
   const setActiveMemo = useCallback((v: string | null) => setActive(v), []);
 
+  // Memoized handlers for mobile menu toggle to prevent re-renders
+  const handleMobileOpen = useCallback(() => setMobileOpen(true), []);
+  const handleMobileClose = useCallback(() => setMobileOpen(false), []);
+
   // Memoized data for better performance
   const researchLinks = useMemo(
     () => [
@@ -108,7 +112,7 @@ export default function Header(): React.ReactElement {
 
   const mobileToggleButton = mobileOpen ? (
     <button
-      onClick={() => setMobileOpen(false)}
+      onClick={handleMobileClose}
       className="lg:hidden inline-flex items-center justify-center w-10 h-10 rounded-xl bg-neutral-100 hover:bg-neutral-200 transition-colors duration-200"
       aria-label="Toggle menu"
       aria-expanded="true"
@@ -149,7 +153,7 @@ export default function Header(): React.ReactElement {
     </button>
   ) : (
     <button
-      onClick={() => setMobileOpen(true)}
+      onClick={handleMobileOpen}
       className="lg:hidden inline-flex items-center justify-center w-10 h-10 rounded-xl bg-neutral-100 hover:bg-neutral-200 transition-colors duration-200"
       aria-label="Toggle menu"
       aria-expanded="false"
@@ -215,7 +219,7 @@ export default function Header(): React.ReactElement {
               <div className="relative w-10 h-10 transition-transform duration-300 group-hover:scale-105">
                 <Image
                   src="/Logo/Logo.svg"
-                  alt=""
+                  alt="Kalyan logo"
                   fill
                   className="object-contain"
                   priority
