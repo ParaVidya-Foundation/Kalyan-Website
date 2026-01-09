@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+:root {
+  /* Light theme only – bright, minimal palette */
+  --background: oklch(0.98 0.01 95);
+  --foreground: oklch(0.18 0.02 60);
+  --card: oklch(1 0 0);
+  --card-foreground: var(--foreground);
+  --primary: oklch(0.3 0.06 40);
+  --primary-foreground: oklch(0.98 0.01 95);
+  --secondary: oklch(0.96 0.02 95);
+  --secondary-foreground: var(--foreground);
+  --muted: oklch(0.95 0.01 95);
+  --muted-foreground: oklch(0.5 0.02 60);
+  --accent: oklch(0.9 0.08 85);
+  --accent-foreground: oklch(0.22 0.03 45);
+  --border: oklch(0.92 0.01 95);
+  --ring: oklch(0.8 0.03 60);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
+}
