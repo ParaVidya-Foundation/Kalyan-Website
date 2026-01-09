@@ -178,16 +178,7 @@ export function Bento() {
         </BentoGrid>
       </div>
 
-      {/* Animation */}
-      <style dangerouslySetInnerHTML={{__html: `
-        @keyframes pulseSlow {
-          0%, 100% { opacity: 0.45; }
-          50% { opacity: 0.7; }
-        }
-        .animate-pulseSlow {
-          animation: pulseSlow 7s ease-in-out infinite;
-        }
-      `}} />
+      {/* Keyframes moved to globals.css for better performance */}
     </section>
   );
 }

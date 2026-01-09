@@ -5,6 +5,7 @@ import AIBlogGrid from "@/components/research/aiblogs/AIBlogGrid";
 import AIBlogSidebar from "@/components/research/aiblogs/AIBlogSidebar";
 import type { AIBlogCardProps } from "@/components/research/aiblogs/AIBlogCard";
 import { WavyBackground } from "@/components/UIComponents/wavy-background";
+import { StructuredData } from "@/components/structured-data";
 
 const demoPosts: AIBlogCardProps[] = [
   {
@@ -98,18 +99,15 @@ export default function AiBlogs() {
         </div>
       </div>
 
-      {/* Structured Data */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "CollectionPage",
-            name: "AI Research Blogs",
-            description:
-              "Explore insights, experiments, and ideas blending AI with Vedic Astrology.",
-            url: "https://yourwebsite.com/research/blogs",
-          }),
+      {/* Structured Data - using safe component instead of dangerouslySetInnerHTML */}
+      <StructuredData
+        data={{
+          "@context": "https://schema.org",
+          "@type": "CollectionPage",
+          name: "AI Research Blogs",
+          description:
+            "Explore insights, experiments, and ideas blending AI with Vedic Astrology.",
+          url: "https://yourwebsite.com/research/blogs",
         }}
       />
     </section>

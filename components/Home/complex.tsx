@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useCallback } from "react";
 import Image from "next/image";
 import { PlaceholdersAndVanishInput } from "../ui/placeholders-and-vanish-input";
 
@@ -16,21 +16,35 @@ export function Complex() {
     "Can Prashna astrology answer this question?",
   ];
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  // Memoized handlers to prevent re-renders
+  const handleChange = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
     // Input change handler - ready for API integration
     if (process.env.NODE_ENV === "development") {
       console.debug("Input changed:", e.target.value);
     }
-  };
+  }, []);
 
-  const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const onSubmit = useCallback((e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     // Form submission handler - ready for API integration
     if (process.env.NODE_ENV === "development") {
       console.debug("Form submitted");
     }
     // TODO: Implement API call for form submission
-  };
+  }, []);
+
+  // Memoized image error handlers
+  const handleImageError = useCallback((e: React.SyntheticEvent<HTMLImageElement>) => {
+    setImageError(true);
+    e.stopPropagation();
+  }, []);
+
+  const handleImageLoad = useCallback((e: React.SyntheticEvent<HTMLImageElement>) => {
+    const img = e.currentTarget;
+    if (img.naturalWidth === 0 || img.naturalHeight === 0) {
+      setImageError(true);
+    }
+  }, []);
 
   return (
     <section className="relative bg-black">
@@ -89,17 +103,8 @@ export function Complex() {
                 fill
                 priority
                 className="object-contain"
-                onError={(e) => {
-                  setImageError(true);
-                  // Suppress 404 error in console
-                  e.stopPropagation();
-                }}
-                onLoad={(e) => {
-                  const img = e.currentTarget;
-                  if (img.naturalWidth === 0 || img.naturalHeight === 0) {
-                    setImageError(true);
-                  }
-                }}
+                onError={handleImageError}
+                onLoad={handleImageLoad}
                 unoptimized
               />
             ) : (
@@ -117,16 +122,7 @@ export function Complex() {
         </div>
       </div>
 
-      {/* GLOBAL SAFE KEYFRAMES */}
-      <style dangerouslySetInnerHTML={{
-        __html: `
-        @keyframes gradientMove {
-          0% { background-position: 0% 50%; }
-          50% { background-position: 100% 50%; }
-          100% { background-position: 0% 50%; }
-        }
-      `
-      }} />
+      {/* Keyframes moved to globals.css for better performance */}
     </section>
   );
 }
