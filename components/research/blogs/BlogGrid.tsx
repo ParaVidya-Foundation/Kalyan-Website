@@ -87,7 +87,7 @@ export const BlogGrid: React.FC<BlogGridProps> = ({
 
   return (
     <section
-      className="py-12 px-4 sm:px-6 lg:px-8 bg-white"
+      className="py-12 px-4 sm:px-6 lg:px-8"
       aria-label="Blog posts"
       itemScope
       itemType="https://schema.org/CollectionPage"

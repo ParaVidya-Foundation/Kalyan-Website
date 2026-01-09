@@ -184,16 +184,17 @@ export default function PosterPage() {
         </div>
       </div>
 
-    <div className="w-full flex justify-center">
+      <div className="w-full">
   <Image
     src="/Poster/Bento/Banner.png"
     alt="Accessories"
-    width={2000}         // big enough to remain HD
-    height={700}         // EXACT height you want
+    width={2000}
+    height={700}
     priority
-    className="max-h-[700px] w-auto object-cover"
+    className="w-full h-auto object-contain"
   />
 </div>
+
      
       <div className="w-full flex justify-center">
         <TestimonialSlider

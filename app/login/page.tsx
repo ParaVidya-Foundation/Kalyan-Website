@@ -1,14 +1,9 @@
 "use client";
 
-import { useState } from "react";
-import LoginForm from "@/components/login/loginform";
 import CloudScene from "@/components/login/cloudbg";
+import DuoAuthForm from "@/components/login/DuoAuthForm";
 
 export default function LoginPage() {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [rememberMe, setRememberMe] = useState(false);
-
   return (
     <main className="login-page">
       <section className="mountain-banner">
@@ -23,14 +18,7 @@ export default function LoginPage() {
 
         {/* CONTENT */}
         <div className="content">
-          <LoginForm
-            email={email}
-            password={password}
-            rememberMe={rememberMe}
-            setEmail={setEmail}
-            setPassword={setPassword}
-            setRememberMe={setRememberMe}
-          />
+          <DuoAuthForm />
         </div>
       </section>
 
@@ -48,8 +36,7 @@ export default function LoginPage() {
         .mountain-banner {
           position: relative;
           width: 100%;
-          height: calc(120vh + 80px); /* total space including header offset */
-          padding-top: 80px; /* SAFE OFFSET for fixed header */
+         
           overflow: hidden;
         }
 
@@ -57,7 +44,7 @@ export default function LoginPage() {
 
         .cloud-canvas {
           position: absolute;
-          top: 80px; /* start AFTER header */
+
           left: 0;
           width: 100%;
           height: 120vh;
@@ -75,19 +62,19 @@ export default function LoginPage() {
         }
 
         .overlay-1 {
-          top: 80px;
+        
           height: 120vh;
           z-index: 1;
           background: linear-gradient(
             270deg,
             rgba(226, 224, 211, 0) 0%,
-            rgba(0, 0, 0, 0.4) 100%
+            rgba(0, 0, 0, 0.3) 100%
           );
         }
 
         .overlay-2 {
           z-index: 2;
-          top: 80px;
+       
           height: 44em;
           width: 260em;
           background: url("https://terriotech.com/cloud-overlay.png")
