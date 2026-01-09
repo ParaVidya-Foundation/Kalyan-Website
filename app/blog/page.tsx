@@ -82,7 +82,7 @@ const blogPosts = [
 export default function BlogPage() {
   return (
     <main>
-      <section className="bg-gradient-to-b from-secondary/30 to-background py-20 md:py-24">
+      <section className="py-20 md:py-24">
         <div className="mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
           <h1 className="font-serif text-4xl font-bold text-foreground sm:text-5xl md:text-6xl text-balance">
             <span className="text-accent">Jyotish</span> Blog

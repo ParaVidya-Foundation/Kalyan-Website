@@ -51,7 +51,7 @@ export default function BlogsPage() {
   };
 
   return (
-    <main className="min-h-screen bg-white">
+    <main className="min-h-screen">
       <BlogHero />
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <ResearchTopics

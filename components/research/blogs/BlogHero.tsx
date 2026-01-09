@@ -6,7 +6,6 @@ import { Playfair_Display } from "next/font/google";
 const playfairDisplay = Playfair_Display({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
-  variable: "--font-playfair",
   display: "swap",
 });
 
@@ -35,13 +34,13 @@ export default function BlogHero() {
 
   return (
     <section
-      className="relative flex flex-col justify-center sm:py-16 overflow-hidden"
+      className="mt-15 relative flex flex-col justify-center sm:py-16 overflow-hidden"
       aria-label="Blog hero section"
     >
       <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
         {/* Main Heading */}
         <h1
-          className={`${playfairDisplay.variable} font-playfair text-center mb-4 animate-fade-in-up-delay-1`}
+          className={`${playfairDisplay.className} text-center mb-4 animate-fade-in-up-delay-1`}
         >
           <span className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-normal text-gray-900 leading-tight">
             Learn from the{" "}
@@ -53,7 +52,7 @@ export default function BlogHero() {
 
         {/* Sub-heading */}
         <h2
-          className={`${playfairDisplay.variable} font-playfair text-center mb-10 sm:mb-14 md:mb-16 animate-fade-in-up-delay-2`}
+          className={`${playfairDisplay.className} text-center mb-10 sm:mb-14 md:mb-16 animate-fade-in-up-delay-2`}
         >
           <span className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-normal text-gray-900 leading-tight">
             Verified by{" "}

@@ -27,3 +27,9 @@
     @apply bg-background text-foreground antialiased;
   }
 }
+
+@layer utilities {
+  .font-playfair {
+    font-family: var(--font-playfair), "Playfair Display", serif;
+  }
+}

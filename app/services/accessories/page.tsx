@@ -10,20 +10,19 @@ import Image from "next/image";
 export default function AccessoriesPage() {
 
   return (
-  <>
-<div className="w-full flex justify-center">
+  <section className="mt-20">
+
+<div className="w-full">
   <Image
     src="/Accessories/Acc_main.png"
     alt="Accessories"
-    width={2000}         // big enough to remain HD
-    height={700}         // EXACT height you want
+    width={2000}
+    height={700}
     priority
-    className="max-h-[700px] w-auto object-cover"
+    className="w-full h-auto object-contain"
   />
 </div>
-
-     
-    
+  
     <div className="space-y-12 py-8">
              
    
@@ -61,16 +60,17 @@ export default function AccessoriesPage() {
         ]} 
       />
 
-    <div className="w-full flex justify-center">
+<div className="w-full">
   <Image
     src="/Accessories/Acc_idols.png"
     alt="Accessories"
-    width={2000}         // big enough to remain HD
-    height={700}         // EXACT height you want
+    width={2000}
+    height={700}
     priority
-    className="max-h-[700px] w-auto object-cover"
+    className="w-full h-auto object-contain"
   />
 </div>
+
       <AccessoriesPoojaKit 
         items={[
           { id: 17, title: "Complete Pooja Kit with Brass Items", image: "/Accessories/pooja2.webp", price: 899, oldPrice: 1500, href: "/store/accessories/Product?id=17" },
@@ -84,16 +84,17 @@ export default function AccessoriesPage() {
         ]} 
       />
 
-    <div className="w-full flex justify-center">
+<div className="w-full">
   <Image
     src="/Accessories/acc_zodiac.png"
     alt="Accessories"
-    width={2000}         // big enough to remain HD
-    height={700}         // EXACT height you want
+    width={2000}
+    height={700}
     priority
-    className="max-h-[700px] w-auto object-cover"
+    className="w-full h-auto object-contain"
   />
 </div>
+
 
       <AccessoriesRashi 
         items={[
@@ -109,7 +110,7 @@ export default function AccessoriesPage() {
       />
 
     </div>
-    </>
+    </section>
   );
 }
 
