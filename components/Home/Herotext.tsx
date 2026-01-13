@@ -91,7 +91,35 @@ export default function HeroText() {
         </p>
       </div>
 
-      {/* Gradient animation - styles moved to globals.css for better performance */}
+      <style dangerouslySetInnerHTML={{
+        __html: `
+        .animated-gradient-text {
+          background: linear-gradient(
+            120deg,
+            #f472b6,
+            #c084fc,
+            #818cf8,
+            #f472b6
+          );
+          background-size: 300% 300%;
+          animation: gradientMove 6s ease infinite;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+
+        @keyframes gradientMove {
+          0% {
+            background-position: 0% 50%;
+          }
+          50% {
+            background-position: 100% 50%;
+          }
+          100% {
+            background-position: 0% 50%;
+          }
+        }
+      `
+      }} />
     </section>
   );
 }

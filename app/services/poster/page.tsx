@@ -14,14 +14,14 @@ export default function PosterPage() {
   }, []);
 
   const myItems = [
-    { id: "a", title: "Cosmic Mandala Collection", link: "/store/poster/Product?id=1", imageUrl: "/Poster/Bento/1.webp" },
-    { id: "b", title: "Vedic Astrology Charts", link: "/store/poster/Product?id=2", imageUrl: "/Poster/Bento/2.webp" },
-    { id: "c", title: "Planetary Alignment", link: "/store/poster/Product?id=3", imageUrl: "/Poster/Bento/3.webp" },
-    { id: "d", title: "Sacred Geometry", link: "/store/poster/Product?id=4", imageUrl: "/Poster/Bento/4.webp" },
-    { id: "e", title: "Zodiac Constellations", link: "/store/poster/Product?id=5", imageUrl: "/Poster/Bento/5.webp" },
-    { id: "f", title: "Spiritual Symbols", link: "/store/poster/Product?id=6", imageUrl: "/Poster/Bento/6.webp" },
-    { id: "g", title: "Mantra Art Collection", link: "/store/poster/Product?id=7", imageUrl: "/Poster/Bento/7.webp" },
-    { id: "h", title: "Chakra Energy Maps", link: "/store/poster/Product?id=8", imageUrl: "/Poster/Bento/8.webp" },
+    { id: "a", title: "Cosmic Mandala Collection", link: "/login", imageUrl: "/Poster/Bento/1.webp" },
+    { id: "b", title: "Vedic Astrology Charts", link: "/login", imageUrl: "/Poster/Bento/2.webp" },
+    { id: "c", title: "Planetary Alignment", link: "/login", imageUrl: "/Poster/Bento/3.webp" },
+    { id: "d", title: "Sacred Geometry", link: "/login", imageUrl: "/Poster/Bento/4.webp" },
+    { id: "e", title: "Zodiac Constellations", link: "/login", imageUrl: "/Poster/Bento/5.webp" },
+    { id: "f", title: "Spiritual Symbols", link: "/login", imageUrl: "/Poster/Bento/6.webp" },
+    { id: "g", title: "Mantra Art Collection", link: "/login", imageUrl: "/Poster/Bento/7.webp" },
+    { id: "h", title: "Chakra Energy Maps", link: "/login", imageUrl: "/Poster/Bento/8.webp" },
   ];
 
   const Collection_Poster = [

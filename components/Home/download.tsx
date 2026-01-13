@@ -67,7 +67,21 @@ export default function Download() {
         </div>
       </div>
 
-      {/* Keyframes moved to globals.css for better performance */}
+      <style dangerouslySetInnerHTML={{
+        __html: `
+        @keyframes spinSlow {
+          from {
+            transform: rotate(0deg);
+          }
+          to {
+            transform: rotate(360deg);
+          }
+        }
+
+        .animate-spinSlow {
+          animation: spinSlow 40s linear infinite;
+        }
+      `}} />
     </section>
   );
 }

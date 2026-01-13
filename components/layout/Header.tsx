@@ -198,7 +198,7 @@ export default function Header(): React.ReactElement {
     <>
       <header
         ref={headerRef}
-        className="fixed inset-x-0 top-0 z-50 transition-all duration-300"
+        className="fixed inset-x-0 top-0 z-1000 transition-all duration-300"
         aria-label="Main navigation"
       >
         <div className="mx-auto max-w-[1400px] px-6 lg:px-8">
