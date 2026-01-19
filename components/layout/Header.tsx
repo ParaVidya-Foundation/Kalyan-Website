@@ -96,7 +96,7 @@ export default function Header(): React.ReactElement {
       { href: "/services/poster", label: "Poster" },
       { href: "/services/gems", label: "Gems" },
       { href: "/services/accessories", label: "Accessories" },
-      { href: "/services/consultation", label: "Consultation" },
+      { href: "/services/reports", label: "Reports" },
     ],
     []
   );
