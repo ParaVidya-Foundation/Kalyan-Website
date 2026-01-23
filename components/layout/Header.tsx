@@ -393,7 +393,7 @@ export default function Header(): React.ReactElement {
                 </h3>
                 <div className="space-y-4">
                   <Link
-                    href="/ai/vastu"
+                    href="/AIFeature/Vastu"
                     onClick={closeAll}
                     className="flex items-center gap-4 p-4 rounded-xl bg-neutral-50 hover:bg-neutral-100 transition-colors"
                   >
@@ -414,8 +414,57 @@ export default function Header(): React.ReactElement {
                       </p>
                     </div>
                   </Link>
+
+
                   <Link
-                    href="/ai/palmistry"
+                    href="/AIFeature/Face"
+                    onClick={closeAll}
+                    className="flex items-center gap-4 p-4 rounded-xl bg-neutral-50 hover:bg-neutral-100 transition-colors"
+                  >
+                    <div className="relative w-16 h-12 rounded-lg overflow-hidden shrink-0">
+                      <Image
+                        src="/images/face.png"
+                        alt=""
+                        fill
+                        className="object-cover"
+                      />
+                    </div>
+                    <div>
+                      <h4 className="text-[15px] font-semibold text-neutral-900">
+                        Face Reading
+                      </h4>
+                      <p className="text-[13px] text-neutral-600">
+                        Face reading
+                      </p>
+                    </div>
+                  </Link>
+
+                  <Link
+                    href="/AIFeature/Face"
+                    onClick={closeAll}
+                    className="flex items-center gap-4 p-4 rounded-xl bg-neutral-50 hover:bg-neutral-100 transition-colors"
+                  >
+                    <div className="relative w-16 h-12 rounded-lg overflow-hidden shrink-0">
+                      <Image
+                        src="/images/face.png"
+                        alt=""
+                        fill
+                        className="object-cover"
+                      />
+                    </div>
+                    <div>
+                      <h4 className="text-[15px] font-semibold text-neutral-900">
+                        Face Reading
+                      </h4>
+                      <p className="text-[13px] text-neutral-600">
+                        Face reading
+                      </p>
+                    </div>
+                  </Link>
+
+
+                  <Link
+                    href="/AIFeature/Palmistry"
                     onClick={closeAll}
                     className="flex items-center gap-4 p-4 rounded-xl bg-neutral-50 hover:bg-neutral-100 transition-colors"
                   >

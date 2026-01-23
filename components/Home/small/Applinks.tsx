@@ -44,7 +44,7 @@ const Applinks: React.FC = () => {
           </Icon>
 
           <TextWrapper>
-            <TextLine1>Download on</TextLine1>
+            <TextLine1>DOWNLOAD ON</TextLine1>
             <TextLine2>App Store</TextLine2>
           </TextWrapper>
         </StoreButton>
@@ -56,7 +56,7 @@ const Applinks: React.FC = () => {
 export default Applinks;
 
 /* =========================
-   STYLES — DARK THEME
+   STYLES — DARK / TECH
 ========================= */
 
 const Wrapper = styled.div`
@@ -66,7 +66,7 @@ const Wrapper = styled.div`
 const ButtonGroup = styled.div`
   display: flex;
   align-items: center;
-  gap: 1.2rem;
+  gap: 1.25rem;
   flex-wrap: wrap;
 
   @media (min-width: 768px) {
@@ -75,11 +75,10 @@ const ButtonGroup = styled.div`
 `;
 
 const StoreButton = styled.a`
-  position: relative;
   display: inline-flex;
   align-items: center;
   gap: 0.75rem;
-  padding: 14px 20px;
+  padding: 14px 22px;
 
   border-radius: 9999px;
   border: 1px solid rgba(255, 255, 255, 0.18);
@@ -95,11 +94,11 @@ const StoreButton = styled.a`
   color: #ffffff;
   text-decoration: none;
 
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
 
   box-shadow:
-    0 8px 30px rgba(0, 0, 0, 0.6),
+    0 10px 30px rgba(0, 0, 0, 0.6),
     inset 0 1px 0 rgba(255, 255, 255, 0.12);
 
   transition:
@@ -109,10 +108,10 @@ const StoreButton = styled.a`
 
   &:hover {
     transform: translateY(-2px);
-    border-color: rgba(168, 85, 247, 0.6);
+    border-color: rgba(168, 85, 247, 0.7);
     box-shadow:
-      0 14px 50px rgba(168, 85, 247, 0.45),
-      inset 0 1px 0 rgba(255, 255, 255, 0.16);
+      0 16px 55px rgba(168, 85, 247, 0.45),
+      inset 0 1px 0 rgba(255, 255, 255, 0.18);
   }
 `;
 
@@ -120,7 +119,7 @@ const Icon = styled.svg`
   width: 1.6rem;
   height: 1.6rem;
   flex-shrink: 0;
-  color: #ffffff;
+  fill: #ffffff; /* 🔥 FIX — forces all paths to white */
 `;
 
 const TextWrapper = styled.div`
@@ -131,7 +130,7 @@ const TextWrapper = styled.div`
 
 const TextLine1 = styled.span`
   font-size: 0.65rem;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.14em;
   opacity: 0.75;
   font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
 `;

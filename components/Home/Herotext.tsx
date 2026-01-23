@@ -73,7 +73,7 @@ export default function HeroText() {
           <span className="animated-gradient-text">
             Your personalised daily
             <br />
-            AI horoscope podcast
+            AI horoscope prediction
           </span>
           <br />
 
