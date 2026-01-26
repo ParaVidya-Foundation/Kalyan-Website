@@ -283,18 +283,33 @@ export default function Header(): React.ReactElement {
                 {/* AI Features */}
                 <NavItem label="AI Features" active={active} setActive={setActiveMemo}>
                   <div className="grid grid-cols-2 gap-6 min-w-[620px]">
-                    <FeatureCard
+                  <FeatureCard
                       title="Vastu AI"
                       desc="Spatial intelligence & energy mapping"
                       img="/images/vastu.png"
-                      href="/ai/vastu"
+                      href="/AIFeature/Vastu"
+                      onClick={closeAll}
+                    />
+                    <FeatureCard
+                      title="Face Reading"
+                      desc="Face reading"
+                      img="/Blogs/AIBlogs/AIASTRO.jpg"
+                      href="/AIFeature/Face"
                       onClick={closeAll}
                     />
                     <FeatureCard
                       title="Palmistry AI"
                       desc="Deep AI-powered palm insights"
                       img="/images/palm.png"
-                      href="/ai/palmistry"
+                      href="/AIFeature/Palmistry"
+                      onClick={closeAll}
+                    />
+                    
+                    <FeatureCard
+                      title="Palmistry AI"
+                      desc="Deep AI-powered palm insights"
+                      img="/images/palm.png"
+                      href="/AIFeature/Palmistry"
                       onClick={closeAll}
                     />
                   </div>

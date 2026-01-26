@@ -20,15 +20,15 @@ interface GemData {
 }
 
 const PreciousStone: GemData[] = [
-  { name: "Yellow Sapphire", imgSrc: "/Gems/Yellow-Sapphire.webp", price: 17000, discount: 10, iconBg: "#F9FAFB" },
-  { name: "Red Coral", imgSrc: "/Gems/Red-Coral.webp", price: 2000, discount: 20, iconBg: "#F9FAFB" },
-  { name: "Pearl", imgSrc: "/Gems/Pearl.webp", price: 2500, discount: 15, iconBg: "#F9FAFB" },
-  { name: "Hessonite", imgSrc: "/Gems/Hessonite.webp", price: 3000, discount: 15, iconBg: "#F9FAFB" },
-  { name: "Cats Eye", imgSrc: "/Gems/Cats-Eye.webp", price: 3000, discount: 20, iconBg: "#F9FAFB" },
-  { name: "Blue Sapphire", imgSrc: "/Gems/Blue-Sapphire.webp", price: 17000, discount: 10, iconBg: "#F9FAFB" },
-  { name: "Ruby", imgSrc: "/Gems/Ruby.webp", price: 6000, discount: 15, iconBg: "#F9FAFB" },
-  { name: "White Sapphire", imgSrc: "/Gems/White-Sapphire.webp", price: 17000, discount: 20, iconBg: "#F9FAFB" },
-  { name: "Green Emerald", imgSrc: "/Gems/Green-Emerald.webp", price: 10000, discount: 10, iconBg: "#F9FAFB" },
+  { name: "Yellow Sapphire", imgSrc: "/Gems/Yellow-Sapphire.webp", price: 17000, discount: 10, iconBg: "#FEF7F2" },
+  { name: "Red Coral", imgSrc: "/Gems/Red-Coral.webp", price: 2000, discount: 20, iconBg: "#FEF7F2" },
+  { name: "Pearl", imgSrc: "/Gems/Pearl.webp", price: 2500, discount: 15, iconBg: "#FEF7F2" },
+  { name: "Hessonite", imgSrc: "/Gems/Hessonite.webp", price: 3000, discount: 15, iconBg: "#FEF7F2" },
+  { name: "Cats Eye", imgSrc: "/Gems/Cats-Eye.webp", price: 3000, discount: 20, iconBg: "#FEF7F2" },
+  { name: "Blue Sapphire", imgSrc: "/Gems/Blue-Sapphire.webp", price: 17000, discount: 10, iconBg: "#FEF7F2" },
+  { name: "Ruby", imgSrc: "/Gems/Ruby.webp", price: 6000, discount: 15, iconBg: "#FEF7F2" },
+  { name: "White Sapphire", imgSrc: "/Gems/White-Sapphire.webp", price: 17000, discount: 20, iconBg: "#FEF7F2" },
+  { name: "Green Emerald", imgSrc: "/Gems/Green-Emerald.webp", price: 10000, discount: 10, iconBg: "#FEF7F2" },
 ];
 
 export default function PreciousGems() {

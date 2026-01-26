@@ -51,7 +51,7 @@ export default function MakingPerfume() {
             className="relative w-full max-w-[560px] mx-auto"
           >
             <Image
-              src="/Perfume/person.png"
+              src="/Perfume/sunil_vashist.png"
               alt="Perfume Making"
               width={900}
               height={1100}
@@ -102,7 +102,7 @@ export default function MakingPerfume() {
             className="order-1 md:order-2 relative w-full max-w-[560px] mx-auto"
           >
             <Image
-              src="/Perfume/person.png"
+              src="/Perfume/soham_vashist.png"
               alt="Choosing Perfume"
               width={900}
               height={1100}
