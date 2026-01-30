@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-const IMAGES = ["/matchmaking/mmil.webp", "/matchmaking/mmil1.webp"];
+const IMAGES = ["/Service/matchmaking/mmil.webp", "/Service/matchmaking/mmil1.webp"];
 
 export default function HeroMatch() {
   const [index, setIndex] = useState(0);

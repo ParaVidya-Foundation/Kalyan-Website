@@ -7,18 +7,18 @@ import AccessoriesRashi from "@/components/store/Accessories/Rashi";
 
 // Gems images as placeholders
 const gemsImages = [
-  "/Gems/Blue-Sapphire.webp",
-  "/Gems/Yellow-Sapphire.webp",
-  "/Gems/Ruby.webp",
-  "/Gems/Green-Emerald.webp",
-  "/Gems/Pearl.webp",
-  "/Gems/Red-Coral.webp",
-  "/Gems/Hessonite.webp",
-  "/Gems/Cats-Eye.webp",
-  "/Gems/White-Sapphire.webp",
-  "/Gems/Amethyst.webp",
-  "/Gems/Moonstone.webp",
-  "/Gems/Peridot.webp",
+  "/Service/Gems/Blue-Sapphire.webp",
+  "/Service/Gems/Yellow-Sapphire.webp",
+  "/Service/Gems/Ruby.webp",
+  "/Service/Gems/Green-Emerald.webp",
+  "/Service/Gems/Pearl.webp",
+  "/Service/Gems/Red-Coral.webp",
+  "/Service/Gems/Hessonite.webp",
+  "/Service/Gems/Cats-Eye.webp",
+  "/Service/Gems/White-Sapphire.webp",
+  "/Service/Gems/Amethyst.webp",
+  "/Service/Gems/Moonstone.webp",
+  "/Service/Gems/Peridot.webp",
 ];
 
 export default function StorePage() {

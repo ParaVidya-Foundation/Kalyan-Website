@@ -9,12 +9,12 @@ import Preference from "./preference";
 /* ---------------- FLOATING PETALS CONFIG ---------------- */
 
 const PETALS = [
-  "/matchmaking/1.webp",
-  "/matchmaking/2.webp",
-  "/matchmaking/3.webp",
-  "/matchmaking/4.webp",
-  "/matchmaking/5.webp",
-  "/matchmaking/6.webp",
+  "/Service/matchmaking/1.webp",
+  "/Service/matchmaking/2.webp",
+  "/Service/matchmaking/3.webp",
+  "/Service/matchmaking/4.webp",
+  "/Service/matchmaking/5.webp",
+  "/Service/matchmaking/6.webp",
 ];
 
 const PETAL_COUNT = 26;
@@ -57,7 +57,7 @@ export default function Middle() {
       {/* TOP IMAGE (static) */}
       <div className="relative z-10 w-full">
         <Image
-          src="/matchmaking/hand_writing.webp"
+          src="/Service/matchmaking/hand_writing.webp"
           alt="Hand image"
           width={1500}
           height={500}
@@ -152,7 +152,7 @@ export default function Middle() {
            {/* BOTTOM BORDER */}
            <div className="relative z-20 w-full">
           <Image
-            src="/matchmaking/border.webp"
+            src="/Service/matchmaking/border.webp"
             alt="Decorative border"
             width={1920}
             height={275}

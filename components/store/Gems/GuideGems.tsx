@@ -39,7 +39,7 @@ export default function HeroGemContact({
       {/* ✅ Full-cover background image */}
       <div className="absolute inset-0">
         <Image
-          src={imageSrc || "/Gems/Gems-confused.webp"}
+          src={imageSrc || "/Service/Gems/Gems-confused.webp"}
           alt={typeof title === "string" ? title : "Hero background"}
           fill
           priority
@@ -51,8 +51,8 @@ export default function HeroGemContact({
           blurDataURL="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMSIgaGVpZ2h0PSIxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiNmNWY1ZjUiLz48L3N2Zz4="
           onError={(e) => {
             const target = e.target as HTMLImageElement;
-            if (target.src !== "/Gems/Gems-confused.webp") {
-              target.src = "/Gems/Gems-confused.webp";
+            if (target.src !== "/Service/Gems/Gems-confused.webp") {
+              target.src = "/Service/Gems/Gems-confused.webp";
             }
           }}
         />

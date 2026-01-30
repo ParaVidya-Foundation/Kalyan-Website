@@ -1,6 +1,6 @@
 "use client";
-
-import TestSection from "@/components/education/test/testsection";
+import CertTest from "@/components/education/cerificate/CertTest";
+import CertTestimonial from "@/components/education/cerificate/CertTestimonial";
 import SubjectCard from "@/components/education/test/SubjectCard";
 import TestHero from "@/components/education/test/TestHero";
 
@@ -17,15 +17,8 @@ export default function TestPage() {
      <SubjectCard />
       
 
-    <div className="flex justify-center relative w-full">
-          <TestSection onSubmitEmail={() => {
-            // Handle email submission - ready for API integration
-            if (process.env.NODE_ENV === "development") {
-              console.debug("Email submitted");
-            }
-            // TODO: Implement API call for email submission
-          }} />
-        </div>
+     <CertTest />
+     <CertTestimonial />
         </section>
         </>
   );

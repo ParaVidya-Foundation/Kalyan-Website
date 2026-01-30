@@ -21,7 +21,7 @@ export default function PerfumePage() {
         {/* HERO IMAGE */}
         <div className="relative h-[var(--hero-h)] w-full overflow-hidden">
           <Image
-            src="/Perfume/PERFUME-PLATFORM.png"
+            src="/Service/Perfume/PERFUME-PLATFORM.webp"
             alt="Perfume Hero"
             fill
             priority
@@ -34,7 +34,7 @@ export default function PerfumePage() {
         <div className="absolute left-0 right-0 bottom-[-75px] z-20 pointer-events-none">
           <div className="relative w-full h-[230px]">
             <Image
-              src="/Perfume/Paper-Border.png"
+              src="/Service/Perfume/Paper-Border.webp"
               alt="Paper Border Over Hero"
               fill
               priority
@@ -58,7 +58,7 @@ export default function PerfumePage() {
         <div className="absolute inset-x-0 bottom-[-50px] z-5 pointer-events-none rotate-180">
           <div className="relative w-full h-[230px]">
             <Image
-              src="/Perfume/Paper-Border.png"
+              src="/Service/Perfume/Paper-Border.webp"
               alt="Bottom Paper Border"
               fill
               sizes="100vw"

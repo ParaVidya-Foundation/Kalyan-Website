@@ -15,7 +15,7 @@ export default function PalmistryPage() {
 <Palmexpert />
 </div>
 <Image
-          src="/AI/Palmistry/PalmistryConsultation.png"
+          src="/AI/Palmistry/PalmistryConsultation.webp"
           alt="AI Vastu – intelligent space alignment"
           width={1920}
           height={700}

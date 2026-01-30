@@ -6,43 +6,43 @@ import Link from "next/link";
 
 const reports = [
   {
-    src: "/Reports/Wealth.webp",
-    hover: "/Reports/Wealth1.webp",
+    src: "/Service/Reports/Wealth.webp",
+    hover: "/Service/Reports/Wealth1.webp",
     title: "Artha — The Path of Wealth",
     subtitle:
       "A refined understanding of prosperity, income, and material balance.",
   },
   {
-    src: "/Reports/Health.webp",
-    hover: "/Reports/Health1.webp",
+    src: "/Service/Reports/Health.webp",
+    hover: "/Service/Reports/Health1.webp",
     title: "Sharira — The Science of Health",
     subtitle:
       "Insights into vitality, longevity, and physical harmony.",
   },
   {
-    src: "/Reports/Education.webp",
-    hover: "/Reports/Education1.webp",
+    src: "/Service/Reports/Education.webp",
+    hover: "/Service/Reports/Education1.webp",
     title: "Vidya — Education & Intellect",
     subtitle:
       "Learning patterns, intelligence, and academic direction.",
   },
   {
-    src: "/Reports/Marriage.webp",
-    hover: "/Reports/Marriage1.webp",
+    src: "/Service/Reports/Marriage.webp",
+    hover: "/Service/Reports/Marriage1.webp",
     title: "Vivaha — Sacred Union",
     subtitle:
       "Compatibility, partnership rhythm, and marital alignment.",
   },
   {
-    src: "/Reports/Life.webp",
-    hover: "/Reports/Life1.webp",
+    src: "/Service/Reports/Life.webp",
+    hover: "/Service/Reports/Life1.webp",
     title: "Jeevan — The Larger Journey",
     subtitle:
       "Purpose, karmic flow, and life direction revealed.",
   },
   {
-    src: "/Reports/General.webp",
-    hover: "/Reports/General1.webp",
+    src: "/Service/Reports/General.webp",
+    hover: "/Service/Reports/General1.webp",
     title: "Samagra — Complete Life Report",
     subtitle:
       "A holistic view combining all dimensions of destiny.",

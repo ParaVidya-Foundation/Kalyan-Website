@@ -30,7 +30,7 @@ export default function PalmistryHero() {
       {/* HERO IMAGE */}
       <div className="relative z-10 w-full">
         <Image
-          src="/AI/Palmistry/palmhero.png"
+          src="/AI/Palmistry/palmhero.webp"
           alt="AI Palmistry – intelligent hand analysis"
           width={1440}
           height={900}

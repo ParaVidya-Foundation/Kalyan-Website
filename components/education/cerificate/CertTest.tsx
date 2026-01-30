@@ -73,7 +73,7 @@ export default function CertTest() {
       {/* HERO VISUAL */}
       <div className="relative z-10 w-full">
         <Image
-          src="/Reports/testbanner.png"
+          src="/Service/Reports/testbanner.webp"
           alt="Astrology Certification Program"
           width={1920}
           height={600}
@@ -82,7 +82,7 @@ export default function CertTest() {
             w-full h-auto object-cover object-center
             drop-shadow-[0_60px_120px_rgba(0,0,0,0.18)]
           "
-          style={{ position: 'relative', top: "-75px" }}
+          style={{ position: 'relative' }}
         />
       </div>
 

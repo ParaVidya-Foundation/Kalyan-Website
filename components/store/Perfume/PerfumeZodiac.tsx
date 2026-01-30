@@ -16,18 +16,18 @@ type Zodiac = {
 
 /* ---------------- DATA ---------------- */
 const ZODIACS: Zodiac[] = [
-  { id: "aries", title: "Aries", zodiacImg: "/Perfume/Zodiac/aries_card.webp", perfumeImg: "/Perfume/Zodiac/aries.webp", desc: "Aries — Bold fire, raw confidence, unstoppable drive." },
-  { id: "taurus", title: "Taurus", zodiacImg: "/Perfume/Zodiac/taurus_card.webp", perfumeImg: "/Perfume/Zodiac/taurus.webp", desc: "Taurus — Earthy luxury, calm strength, sensual depth." },
-  { id: "gemini", title: "Gemini", zodiacImg: "/Perfume/Zodiac/gemini_card.webp", perfumeImg: "/Perfume/Zodiac/gemini.webp", desc: "Gemini — Fresh curiosity, light citrus, playful air." },
-  { id: "cancer", title: "Cancer", zodiacImg: "/Perfume/Zodiac/cancer_card.webp", perfumeImg: "/Perfume/Zodiac/cancer.webp", desc: "Cancer — Soft lunar warmth, emotional comfort." },
-  { id: "leo", title: "Leo", zodiacImg: "/Perfume/Zodiac/leo_card.webp", perfumeImg: "/Perfume/Zodiac/leo.webp", desc: "Leo — Regal glow, golden pride, magnetic presence." },
-  { id: "virgo", title: "Virgo", zodiacImg: "/Perfume/Zodiac/virgo_card.webp", perfumeImg: "/Perfume/Zodiac/virgo.webp", desc: "Virgo — Clean elegance, precision, subtle refinement." },
-  { id: "libra", title: "Libra", zodiacImg: "/Perfume/Zodiac/libra_card.webp", perfumeImg: "/Perfume/Zodiac/libra.webp", desc: "Libra — Perfect balance, airy florals, harmony." },
-  { id: "scorpio", title: "Scorpio", zodiacImg: "/Perfume/Zodiac/scorpio_card.webp", perfumeImg: "/Perfume/Zodiac/scorpio.webp", desc: "Scorpio — Dark intensity, mystery, magnetic depth." },
-  { id: "sagittarius", title: "Sagittarius", zodiacImg: "/Perfume/Zodiac/sagittarius_card.webp", perfumeImg: "/Perfume/Zodiac/sagittarius.webp", desc: "Sagittarius — Wild freedom, spice, open horizons." },
-  { id: "capricorn", title: "Capricorn", zodiacImg: "/Perfume/Zodiac/capricorn_card.webp", perfumeImg: "/Perfume/Zodiac/capricorn.webp", desc: "Capricorn — Authority, structure, timeless strength." },
-  { id: "aquarius", title: "Aquarius", zodiacImg: "/Perfume/Zodiac/aquarius_card.webp", perfumeImg: "/Perfume/Zodiac/aquarius.webp", desc: "Aquarius — Electric originality, cool innovation." },
-  { id: "pisces", title: "Pisces", zodiacImg: "/Perfume/Zodiac/pisces_card.webp", perfumeImg: "/Perfume/Zodiac/pisces.webp", desc: "Pisces — Dreamy waters, soft mysticism, intuition." },
+  { id: "aries", title: "Aries", zodiacImg: "/Service/Perfume/Zodiac/aries_card.webp", perfumeImg: "/Service/Perfume/Zodiac/aries.webp", desc: "Aries — Bold fire, raw confidence, unstoppable drive." },
+  { id: "taurus", title: "Taurus", zodiacImg: "/Service/Perfume/Zodiac/taurus_card.webp", perfumeImg: "/Service/Perfume/Zodiac/taurus.webp", desc: "Taurus — Earthy luxury, calm strength, sensual depth." },
+  { id: "gemini", title: "Gemini", zodiacImg: "/Service/Perfume/Zodiac/gemini_card.webp", perfumeImg: "/Service/Perfume/Zodiac/gemini.webp", desc: "Gemini — Fresh curiosity, light citrus, playful air." },
+  { id: "cancer", title: "Cancer", zodiacImg: "/Service/Perfume/Zodiac/cancer_card.webp", perfumeImg: "/Service/Perfume/Zodiac/cancer.webp", desc: "Cancer — Soft lunar warmth, emotional comfort." },
+  { id: "leo", title: "Leo", zodiacImg: "/Service/Perfume/Zodiac/leo_card.webp", perfumeImg: "/Service/Perfume/Zodiac/leo.webp", desc: "Leo — Regal glow, golden pride, magnetic presence." },
+  { id: "virgo", title: "Virgo", zodiacImg: "/Service/Perfume/Zodiac/virgo_card.webp", perfumeImg: "/Service/Perfume/Zodiac/virgo.webp", desc: "Virgo — Clean elegance, precision, subtle refinement." },
+  { id: "libra", title: "Libra", zodiacImg: "/Service/Perfume/Zodiac/libra_card.webp", perfumeImg: "/Service/Perfume/Zodiac/libra.webp", desc: "Libra — Perfect balance, airy florals, harmony." },
+  { id: "scorpio", title: "Scorpio", zodiacImg: "/Service/Perfume/Zodiac/scorpio_card.webp", perfumeImg: "/Service/Perfume/Zodiac/scorpio.webp", desc: "Scorpio — Dark intensity, mystery, magnetic depth." },
+  { id: "sagittarius", title: "Sagittarius", zodiacImg: "/Service/Perfume/Zodiac/sagittarius_card.webp", perfumeImg: "/Service/Perfume/Zodiac/sagittarius.webp", desc: "Sagittarius — Wild freedom, spice, open horizons." },
+  { id: "capricorn", title: "Capricorn", zodiacImg: "/Service/Perfume/Zodiac/capricorn_card.webp", perfumeImg: "/Service/Perfume/Zodiac/capricorn.webp", desc: "Capricorn — Authority, structure, timeless strength." },
+  { id: "aquarius", title: "Aquarius", zodiacImg: "/Service/Perfume/Zodiac/aquarius_card.webp", perfumeImg: "/Service/Perfume/Zodiac/aquarius.webp", desc: "Aquarius — Electric originality, cool innovation." },
+  { id: "pisces", title: "Pisces", zodiacImg: "/Service/Perfume/Zodiac/pisces_card.webp", perfumeImg: "/Service/Perfume/Zodiac/pisces.webp", desc: "Pisces — Dreamy waters, soft mysticism, intuition." },
 ];
 
 /* ---------------- MOTION PRESETS ---------------- */

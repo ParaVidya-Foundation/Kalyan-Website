@@ -5,16 +5,16 @@ import Image from "next/image";
 
 const CustomRing: React.FC = () => {
   const webps = [
-    { className: "image1", src: "/Gems/b1.webp", alt: "Bottom Left Gem" },
-    { className: "image2", src: "/Gems/b2.webp", alt: "Bottom Right Gem" },
-    { className: "image3", src: "/Gems/c2.webp", alt: "Center Accent Gem" },
-    { className: "image4", src: "/Gems/tl.webp", alt: "Top Left Gem" },
-    { className: "image5", src: "/Gems/tro.webp", alt: "Top Right Outer Gem" },
-    { className: "image7", src: "/Gems/tr.webp", alt: "Top Right Gem" },
-    { className: "image8", src: "/Gems/bl.webp", alt: "Bottom Left Accent Gem" },
-    { className: "image9", src: "/Gems/center.webp", alt: "Center Gem" },
-    { className: "image11", src: "/Gems/wood.webp", alt: "Wooden Base" },
-    { className: "image12", src: "/Gems/top.webp", alt: "Top Accent Gem" },
+    { className: "image1", src: "/Service/Gems/b1.webp", alt: "Bottom Left Gem" },
+    { className: "image2", src: "/Service/Gems/b2.webp", alt: "Bottom Right Gem" },
+    { className: "image3", src: "/Service/Gems/c2.webp", alt: "Center Accent Gem" },
+    { className: "image4", src: "/Service/Gems/tl.webp", alt: "Top Left Gem" },
+    { className: "image5", src: "/Service/Gems/tro.webp", alt: "Top Right Outer Gem" },
+    { className: "image7", src: "/Service/Gems/tr.webp", alt: "Top Right Gem" },
+    { className: "image8", src: "/Service/Gems/bl.webp", alt: "Bottom Left Accent Gem" },
+    { className: "image9", src: "/Service/Gems/center.webp", alt: "Center Gem" },
+    { className: "image11", src: "/Service/Gems/wood.webp", alt: "Wooden Base" },
+    { className: "image12", src: "/Service/Gems/top.webp", alt: "Top Accent Gem" },
   ];
 
   return (
@@ -33,7 +33,7 @@ const CustomRing: React.FC = () => {
             blurDataURL="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMSIgaGVpZ2h0PSIxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiNmNWY1ZjUiLz48L3N2Zz4="
             onError={(e) => {
               const target = e.target as HTMLImageElement;
-              target.src = "/Gems/center.webp";
+              target.src = "/Service/Gems/center.webp";
             }}
           />
         </div>

@@ -14,14 +14,14 @@ export default function PosterPage() {
   }, []);
 
   const myItems = [
-    { id: "a", title: "Cosmic Mandala Collection", link: "/login", imageUrl: "/Poster/Bento/1.webp" },
-    { id: "b", title: "Vedic Astrology Charts", link: "/login", imageUrl: "/Poster/Bento/2.webp" },
-    { id: "c", title: "Planetary Alignment", link: "/login", imageUrl: "/Poster/Bento/3.webp" },
-    { id: "d", title: "Sacred Geometry", link: "/login", imageUrl: "/Poster/Bento/4.webp" },
-    { id: "e", title: "Zodiac Constellations", link: "/login", imageUrl: "/Poster/Bento/5.webp" },
-    { id: "f", title: "Spiritual Symbols", link: "/login", imageUrl: "/Poster/Bento/6.webp" },
-    { id: "g", title: "Mantra Art Collection", link: "/login", imageUrl: "/Poster/Bento/7.webp" },
-    { id: "h", title: "Chakra Energy Maps", link: "/login", imageUrl: "/Poster/Bento/8.webp" },
+    { id: "a", title: "Cosmic Mandala Collection", link: "/login", imageUrl: "/Service/Poster/Bento/1.webp" },
+    { id: "b", title: "Vedic Astrology Charts", link: "/login", imageUrl: "/Service/Poster/Bento/2.webp" },
+    { id: "c", title: "Planetary Alignment", link: "/login", imageUrl: "/Service/Poster/Bento/3.webp" },
+    { id: "d", title: "Sacred Geometry", link: "/login", imageUrl: "/Service/Poster/Bento/4.webp" },
+    { id: "e", title: "Zodiac Constellations", link: "/login", imageUrl: "/Service/Poster/Bento/5.webp" },
+    { id: "f", title: "Spiritual Symbols", link: "/login", imageUrl: "/Service/Poster/Bento/6.webp" },
+    { id: "g", title: "Mantra Art Collection", link: "/login", imageUrl: "/Service/Poster/Bento/7.webp" },
+    { id: "h", title: "Chakra Energy Maps", link: "/login", imageUrl: "/Service/Poster/Bento/8.webp" },
   ];
 
   const Collection_Poster = [
@@ -32,9 +32,9 @@ export default function PosterPage() {
       price: 299,
       oldPrice: 499,
       images: [
-        "/Poster/Posters/pos1.webp",
-        "/Poster/Posters/pos2.webp",
-        "/Poster/Posters/pos3.webp",
+        "/Service/Poster/Posters/pos1.webp",
+        "/Service/Poster/Posters/pos2.webp",
+        "/Service/Poster/Posters/pos3.webp",
       ],
     },
     {
@@ -44,9 +44,9 @@ export default function PosterPage() {
       price: 349,
       oldPrice: 599,
       images: [
-        "/Poster/Posters/pos2.webp",
-        "/Poster/Posters/pos3.webp",
-        "/Poster/Posters/pos4.webp",
+        "/Service/Poster/Posters/pos2.webp",
+        "/Service/Poster/Posters/pos3.webp",
+        "/Service/Poster/Posters/pos4.webp",
       ],
     },
     {
@@ -56,9 +56,9 @@ export default function PosterPage() {
       price: 279,
       oldPrice: 449,
       images: [
-        "/Poster/Posters/pos3.webp",
-        "/Poster/Posters/pos4.webp",
-        "/Poster/Posters/pos5.webp",
+        "/Service/Poster/Posters/pos3.webp",
+        "/Service/Poster/Posters/pos4.webp",
+        "/Service/Poster/Posters/pos5.webp",
       ],
     },
     {
@@ -68,9 +68,9 @@ export default function PosterPage() {
       price: 249,
       oldPrice: 399,
       images: [
-        "/Poster/Posters/pos4.webp",
-        "/Poster/Posters/pos5.webp",
-        "/Poster/Posters/pos6.webp",
+        "/Service/Poster/Posters/pos4.webp",
+        "/Service/Poster/Posters/pos5.webp",
+        "/Service/Poster/Posters/pos6.webp",
       ],
     },
     {
@@ -80,9 +80,9 @@ export default function PosterPage() {
       price: 329,
       oldPrice: 549,
       images: [
-        "/Poster/Posters/pos5.webp",
-        "/Poster/Posters/pos6.webp",
-        "/Poster/Posters/pos5.webp",
+        "/Service/Poster/Posters/pos5.webp",
+        "/Service/Poster/Posters/pos6.webp",
+        "/Service/Poster/Posters/pos5.webp",
       ],
     },
     {
@@ -92,9 +92,9 @@ export default function PosterPage() {
       price: 269,
       oldPrice: 429,
       images: [
-        "/Poster/Posters/pos6.webp",
-        "/Poster/Posters/pos5.webp",
-        "/Poster/Posters/pos5.webp",
+        "/Service/Poster/Posters/pos6.webp",
+        "/Service/Poster/Posters/pos5.webp",
+        "/Service/Poster/Posters/pos5.webp",
       ],
     },
     {
@@ -104,9 +104,9 @@ export default function PosterPage() {
       price: 289,
       oldPrice: 479,
       images: [
-        "/Poster/Posters/pos5.webp",
-        "/Poster/Posters/pos5.webp",
-        "/Poster/Posters/pos1.webp",
+        "/Service/Poster/Posters/pos5.webp",
+        "/Service/Poster/Posters/pos5.webp",
+        "/Service/Poster/Posters/pos1.webp",
       ],
     },
     {
@@ -116,9 +116,9 @@ export default function PosterPage() {
       price: 319,
       oldPrice: 529,
       images: [
-        "/Poster/Posters/pos5.webp",
-        "/Poster/Posters/pos1.webp",
-        "/Poster/Posters/pos2.webp",
+        "/Service/Poster/Posters/pos5.webp",
+        "/Service/Poster/Posters/pos1.webp",
+        "/Service/Poster/Posters/pos2.webp",
       ],
     },
   ];
@@ -131,8 +131,8 @@ export default function PosterPage() {
       price: 199,
       oldPrice: 349,
       images: [
-        "/Poster/Posters/pos1.webp",
-        "/Poster/Posters/pos2.webp",
+        "/Service/Poster/Posters/pos1.webp",
+        "/Service/Poster/Posters/pos2.webp",
       ],
     },
     {
@@ -142,8 +142,8 @@ export default function PosterPage() {
       price: 229,
       oldPrice: 379,
       images: [
-        "/Poster/Posters/pos2.webp",
-        "/Poster/Posters/pos3.webp",
+        "/Service/Poster/Posters/pos2.webp",
+        "/Service/Poster/Posters/pos3.webp",
       ],
     },
     {
@@ -153,8 +153,8 @@ export default function PosterPage() {
       price: 259,
       oldPrice: 419,
       images: [
-        "/Poster/Posters/pos3.webp",
-        "/Poster/Posters/pos4.webp",
+        "/Service/Poster/Posters/pos3.webp",
+        "/Service/Poster/Posters/pos4.webp",
       ],
     },
     {
@@ -164,15 +164,15 @@ export default function PosterPage() {
       price: 239,
       oldPrice: 389,
       images: [
-        "/Poster/Posters/pos4.webp",
-        "/Poster/Posters/pos5.webp",
+        "/Service/Poster/Posters/pos4.webp",
+        "/Service/Poster/Posters/pos5.webp",
       ],
     },
   ];
 
   return (
     <>
-      <PosterHero posters={["/Poster/Posters/pos1.webp", "/Poster/Posters/pos2.webp", "/Poster/Posters/pos3.webp", "/Poster/Posters/pos4.webp", "/Poster/Posters/pos5.webp","/Poster/Posters/pos6.webp"]} marqueeText="Posters" />
+      <PosterHero posters={["/Service/Poster/Posters/pos1.webp", "/Service/Poster/Posters/pos2.webp", "/Service/Poster/Posters/pos3.webp", "/Service/Poster/Posters/pos4.webp", "/Service/Poster/Posters/pos5.webp","/Service/Poster/Posters/pos6.webp"]} marqueeText="Posters" />
       
       <div className="py-12">
         <div className="max-w-7xl mx-auto px-6">
@@ -186,7 +186,7 @@ export default function PosterPage() {
 
       <div className="w-full">
   <Image
-    src="/Poster/Bento/Banner.png"
+    src="/Service/Poster/Bento/Banner.webp"
     alt="Accessories"
     width={2000}
     height={700}
@@ -199,10 +199,10 @@ export default function PosterPage() {
       <div className="w-full flex justify-center">
         <TestimonialSlider
           videos={[
-            "/Poster/Testimonials/testimonial1.mp4",
-            "/Poster/Testimonials/testimonial2.mp4",
-            "/Poster/Testimonials/testimonial3.mp4",
-            "/Poster/Testimonials/testimonial4.mp4",
+            "/Service/Poster/Testimonials/testimonial1.mp4",
+            "/Service/Poster/Testimonials/testimonial2.mp4",
+            "/Service/Poster/Testimonials/testimonial3.mp4",
+            "/Service/Poster/Testimonials/testimonial4.mp4",
           ]}
           speed={60}
           videoWidth={280}

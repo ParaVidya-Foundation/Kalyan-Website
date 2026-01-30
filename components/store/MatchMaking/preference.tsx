@@ -10,7 +10,7 @@ export default function Preference() {
         {/* LEFT : IMAGE */}
         <div className="relative w-full flex justify-center">
           <Image
-            src="/matchmaking/preference.webp"
+            src="/Service/matchmaking/preference.webp"
             alt="Marriage Preferences Illustration"
             width={760}
             height={760}

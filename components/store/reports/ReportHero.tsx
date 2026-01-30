@@ -4,12 +4,12 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 
 const reports = [
-  { src: "/Reports/Wealth.webp", top: "10%", left: "15%", r: -10, d: 8 },
-  { src: "/Reports/Health.webp", top: "15%", left: "75%", r: 12, d: 10 },
-  { src: "/Reports/Education.webp", top: "55%", left: "8%", r: 14, d: 9 },
-  { src: "/Reports/Marriage.webp", top: "58%", left: "82%", r: -8, d: 11 },
-  { src: "/Reports/Life.webp", top: "55%", left: "34%", r: 6, d: 12 },
-  { src: "/Reports/General.webp", top: "60%", left: "60%", r: -4, d: 13 },
+  { src: "/Service/Reports/Wealth.webp", top: "10%", left: "15%", r: -10, d: 8 },
+  { src: "/Service/Reports/Health.webp", top: "15%", left: "75%", r: 12, d: 10 },
+  { src: "/Service/Reports/Education.webp", top: "55%", left: "8%", r: 14, d: 9 },
+  { src: "/Service/Reports/Marriage.webp", top: "58%", left: "82%", r: -8, d: 11 },
+  { src: "/Service/Reports/Life.webp", top: "55%", left: "34%", r: 6, d: 12 },
+  { src: "/Service/Reports/General.webp", top: "60%", left: "60%", r: -4, d: 13 },
 ];
 
 export default function ReportHero() {

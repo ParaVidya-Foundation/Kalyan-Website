@@ -20,12 +20,12 @@ type HeroProps = {
 
 export default function PosterHero({
   posters = [
-    "/Poster/Posters/pos1.webp",
-    "/Poster/Posters/pos2.webp",
-    "/Poster/Posters/pos3.webp",
-    "/Poster/Posters/pos4.webp",
-    "/Poster/Posters/pos5.webp",
-    "/Poster/Posters/pos6.webp",
+    "/Service/Poster/Posters/pos1.webp",
+    "/Service/Poster/Posters/pos2.webp",
+    "/Service/Poster/Posters/pos3.webp",
+    "/Service/Poster/Posters/pos4.webp",
+    "/Service/Poster/Posters/pos5.webp",
+    "/Service/Poster/Posters/pos6.webp",
   ],
   slideIntervalMs = 6000,
   bgColors = [
@@ -107,7 +107,7 @@ export default function PosterHero({
         <div className="absolute inset-0 flex items-center justify-center">
           <div className="relative w-[min(42vw,400px)] aspect-[17/22]">
             <Image
-              src={posters[posterIndex] || posters[0] || "/Poster/Posters/pos1.webp"}
+              src={posters[posterIndex] || posters[0] || "/Service/Poster/Posters/pos1.webp"}
               alt={`Poster ${posterIndex + 1}`}
               fill
               priority
@@ -191,7 +191,7 @@ export default function PosterHero({
               className="absolute inset-0"
             >
               <Image
-                src={posters[posterIndex] || posters[0] || "/Poster/Posters/pos1.webp"}
+                src={posters[posterIndex] || posters[0] || "/Service/Poster/Posters/pos1.webp"}
                 alt={`Poster ${posterIndex + 1}`}
                 fill
                 priority

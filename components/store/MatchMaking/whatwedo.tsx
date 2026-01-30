@@ -30,7 +30,7 @@ export default function WhatWeDo() {
       {/* BOTTOM IMAGE */}
       <div className="relative z-10 w-full">
         <Image
-          src="/matchmaking/wedding.webp"
+          src="/Service/matchmaking/wedding.webp"
           alt="Sacred wedding moment"
           width={1920}
           height={800}

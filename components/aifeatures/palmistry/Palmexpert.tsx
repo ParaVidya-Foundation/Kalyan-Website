@@ -10,7 +10,7 @@ export default function Palmexpert() {
         {/* LEFT : IMAGE */}
         <div className="relative w-full flex justify-center">
           <Image
-            src="/AI/Palmistry/expert.png"
+            src="/AI/Palmistry/expert.webp"
             alt="Palmistry Expert and AI Analysis"
             width={760}
             height={760}

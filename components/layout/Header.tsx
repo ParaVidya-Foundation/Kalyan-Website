@@ -97,6 +97,8 @@ export default function Header(): React.ReactElement {
       { href: "/services/gems", label: "Gems" },
       { href: "/services/accessories", label: "Accessories" },
       { href: "/services/reports", label: "Reports" },
+      { href: "/services/rectification", label: "Rectification" },
+      { href: "/services/cloud", label: "Cloud" },
     ],
     []
   );
@@ -314,6 +316,21 @@ export default function Header(): React.ReactElement {
                       href="/AIFeature/Numerology"
                       onClick={closeAll}
                     />
+                     <FeatureCard
+                      title="Life Prediction"
+                      desc="Deep AI-powered life prediction insights"
+                      img="/images/palm.png"
+                      href="/AIFeature/LifePrediction"
+                      onClick={closeAll}
+                    />
+                    
+                    <FeatureCard
+                      title="Aura Check"
+                      desc="Deep AI-powered aura check insights"
+                      img="/images/palm.png"
+                      href="/AIFeature/AuraCheck"
+                      onClick={closeAll}
+                    />
                   </div>
                 </NavItem>
 
@@ -503,6 +520,54 @@ export default function Header(): React.ReactElement {
                       </h4>
                       <p className="text-[13px] text-neutral-600">
                         Numerology insights
+                      </p>
+                    </div>
+                  </Link>
+
+                  <Link
+                    href="/AIFeature/LifePrediction"
+                    onClick={closeAll}
+                    className="flex items-center gap-4 p-4 rounded-xl bg-neutral-50 hover:bg-neutral-100 transition-colors"
+                  >
+                    <div className="relative w-16 h-12 rounded-lg overflow-hidden shrink-0">
+                      <Image
+                        src="/images/palm.png"
+                        alt=""
+                        fill
+                        sizes="64px"
+                        className="object-cover"
+                      />
+                    </div>
+                    <div>
+                      <h4 className="text-[15px] font-semibold text-neutral-900">
+                        Life Prediction
+                      </h4>
+                      <p className="text-[13px] text-neutral-600">
+                        Life prediction 
+                      </p>
+                    </div>
+                  </Link>
+
+                  <Link
+                    href="/AIFeature/AuraCheck"
+                    onClick={closeAll}
+                    className="flex items-center gap-4 p-4 rounded-xl bg-neutral-50 hover:bg-neutral-100 transition-colors"
+                  >
+                    <div className="relative w-16 h-12 rounded-lg overflow-hidden shrink-0">
+                      <Image
+                        src="/images/palm.png"
+                        alt=""
+                        fill
+                        sizes="64px"
+                        className="object-cover"
+                      />
+                    </div>
+                    <div>
+                      <h4 className="text-[15px] font-semibold text-neutral-900">
+                        Aura Check
+                      </h4>
+                      <p className="text-[13px] text-neutral-600">
+                        Aura check Gamification
                       </p>
                     </div>
                   </Link>

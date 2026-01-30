@@ -37,12 +37,12 @@ export default function Trailback() {
         >
           <ImageTrail
             items={[
-              "/Poster/Posters/pos1.webp",
-              "/Poster/Posters/pos2.webp",
-              "/Poster/Posters/pos3.webp",
-              "/Poster/Posters/pos4.webp",
-              "/Poster/Posters/pos5.webp",
-              "/Poster/Posters/pos6.webp",
+              "/Service/Poster/Posters/pos1.webp",
+              "/Service/Poster/Posters/pos2.webp",
+              "/Service/Poster/Posters/pos3.webp",
+              "/Service/Poster/Posters/pos4.webp",
+              "/Service/Poster/Posters/pos5.webp",
+              "/Service/Poster/Posters/pos6.webp",
             ]}
             variant={1}
           />
@@ -53,7 +53,7 @@ export default function Trailback() {
       <div className="relative z-[3] flex h-full items-center justify-center pointer-events-none">
         <div className="relative w-[70%] aspect-[16/9]">
           <Image
-            src="/Poster/Posters/postertext.png"
+            src="/Service/Poster/Posters/postertext.png"
             alt="Poster"
             fill
             quality={90}

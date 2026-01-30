@@ -78,7 +78,7 @@ export const PerfumeCard = React.memo(function PerfumeCard({
         {/* product image */}
         <div className="relative w-full max-w-[280px] aspect-4/3 z-10">
           <Image
-            src={item.images[0] || item.images[1] || "/Perfume/1.png"}
+            src={item.images[0] || item.images[1] || "/Service/Perfume/1.png"}
             alt={`${item.name} bottle`}
             fill
             quality={90}
@@ -96,8 +96,8 @@ export const PerfumeCard = React.memo(function PerfumeCard({
               const target = e.target as HTMLImageElement;
               if (item.images[1] && target.src !== item.images[1]) {
                 target.src = item.images[1];
-              } else if (target.src !== "/Perfume/1.png") {
-                target.src = "/Perfume/1.png";
+              } else if (target.src !== "/Service/Perfume/1.png") {
+                target.src = "/Service/Perfume/1.png";
               }
             }}
           />
