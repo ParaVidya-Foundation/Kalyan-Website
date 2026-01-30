@@ -221,6 +221,7 @@ export default function Header(): React.ReactElement {
                   src="/Logo/Logo.svg"
                   alt="Kalyan logo"
                   fill
+                  sizes="40px"
                   className="object-contain"
                   priority
                 />
@@ -258,6 +259,7 @@ export default function Header(): React.ReactElement {
                         src="/images/research.jpg"
                         alt="Research insights"
                         fill
+                        sizes="280px"
                         className="object-cover"
                       />
                     </div>
@@ -306,10 +308,10 @@ export default function Header(): React.ReactElement {
                     />
                     
                     <FeatureCard
-                      title="Palmistry AI"
-                      desc="Deep AI-powered palm insights"
+                      title="Numerology AI"
+                      desc="Deep AI-powered numerology insights"
                       img="/images/palm.png"
-                      href="/AIFeature/Palmistry"
+                      href="/AIFeature/Numerology"
                       onClick={closeAll}
                     />
                   </div>
@@ -417,6 +419,7 @@ export default function Header(): React.ReactElement {
                         src="/images/vastu.png"
                         alt=""
                         fill
+                        sizes="64px"
                         className="object-cover"
                       />
                     </div>
@@ -441,6 +444,7 @@ export default function Header(): React.ReactElement {
                         src="/images/face.png"
                         alt=""
                         fill
+                        sizes="64px"
                         className="object-cover"
                       />
                     </div>
@@ -464,6 +468,7 @@ export default function Header(): React.ReactElement {
                         src="/images/face.png"
                         alt=""
                         fill
+                        sizes="64px"
                         className="object-cover"
                       />
                     </div>
@@ -479,7 +484,7 @@ export default function Header(): React.ReactElement {
 
 
                   <Link
-                    href="/AIFeature/Palmistry"
+                    href="/AIFeature/Numerology"
                     onClick={closeAll}
                     className="flex items-center gap-4 p-4 rounded-xl bg-neutral-50 hover:bg-neutral-100 transition-colors"
                   >
@@ -488,15 +493,16 @@ export default function Header(): React.ReactElement {
                         src="/images/palm.png"
                         alt=""
                         fill
+                        sizes="64px"
                         className="object-cover"
                       />
                     </div>
                     <div>
                       <h4 className="text-[15px] font-semibold text-neutral-900">
-                        Palmistry AI
+                        Numerology AI
                       </h4>
                       <p className="text-[13px] text-neutral-600">
-                        Palm insights
+                        Numerology insights
                       </p>
                     </div>
                   </Link>
@@ -563,6 +569,7 @@ function FeatureCard({
           src={img}
           alt=""
           fill
+          sizes="96px"
           className="object-cover transition-transform duration-500 group-hover:scale-105"
         />
       </div>

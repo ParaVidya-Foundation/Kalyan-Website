@@ -3,6 +3,7 @@
 import PalmistryHero from "@/components/aifeatures/palmistry/PalmistryHero";
 import PalmResult from "@/components/aifeatures/palmistry/PalmResult";
 import Palmexpert from "@/components/aifeatures/palmistry/Palmexpert";
+import PalmistryTrust from "@/components/aifeatures/palmistry/PalmistryTrust";
 import Image from "next/image";
 
 export default function PalmistryPage() {
@@ -21,6 +22,8 @@ export default function PalmistryPage() {
           priority
           className="w-full h-auto object-cover object-center drop-shadow-[0_40px_80px_rgba(0,0,0,0.15)]"
         />
-    </div>
+  
+    <PalmistryTrust />
+    </div>  
   );
 }
