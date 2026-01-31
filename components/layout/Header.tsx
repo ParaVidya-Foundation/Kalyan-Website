@@ -96,7 +96,9 @@ export default function Header(): React.ReactElement {
       { href: "/services/poster", label: "Poster" },
       { href: "/services/gems", label: "Gems" },
       { href: "/services/accessories", label: "Accessories" },
-      { href: "/services/consultation", label: "Consultation" },
+      { href: "/services/reports", label: "Reports" },
+      { href: "/services/rectification", label: "Rectification" },
+      { href: "/services/cloud", label: "Cloud" },
     ],
     []
   );
@@ -198,7 +200,7 @@ export default function Header(): React.ReactElement {
     <>
       <header
         ref={headerRef}
-        className="fixed inset-x-0 top-0 z-50 transition-all duration-300"
+        className="fixed inset-x-0 top-0 z-1000 transition-all duration-300"
         aria-label="Main navigation"
       >
         <div className="mx-auto max-w-[1400px] px-6 lg:px-8">
@@ -221,6 +223,7 @@ export default function Header(): React.ReactElement {
                   src="/Logo/Logo.svg"
                   alt="Kalyan logo"
                   fill
+                  sizes="40px"
                   className="object-contain"
                   priority
                 />
@@ -258,6 +261,7 @@ export default function Header(): React.ReactElement {
                         src="/images/research.jpg"
                         alt="Research insights"
                         fill
+                        sizes="280px"
                         className="object-cover"
                       />
                     </div>
@@ -283,18 +287,48 @@ export default function Header(): React.ReactElement {
                 {/* AI Features */}
                 <NavItem label="AI Features" active={active} setActive={setActiveMemo}>
                   <div className="grid grid-cols-2 gap-6 min-w-[620px]">
-                    <FeatureCard
+                  <FeatureCard
                       title="Vastu AI"
                       desc="Spatial intelligence & energy mapping"
                       img="/images/vastu.png"
-                      href="/ai/vastu"
+                      href="/AIFeature/Vastu"
+                      onClick={closeAll}
+                    />
+                    <FeatureCard
+                      title="Face Reading"
+                      desc="Face reading"
+                      img="/Blogs/AIBlogs/AIASTRO.jpg"
+                      href="/AIFeature/Face"
                       onClick={closeAll}
                     />
                     <FeatureCard
                       title="Palmistry AI"
                       desc="Deep AI-powered palm insights"
                       img="/images/palm.png"
-                      href="/ai/palmistry"
+                      href="/AIFeature/Palmistry"
+                      onClick={closeAll}
+                    />
+                    
+                    <FeatureCard
+                      title="Numerology AI"
+                      desc="Deep AI-powered numerology insights"
+                      img="/images/palm.png"
+                      href="/AIFeature/Numerology"
+                      onClick={closeAll}
+                    />
+                     <FeatureCard
+                      title="Life Prediction"
+                      desc="Deep AI-powered life prediction insights"
+                      img="/images/palm.png"
+                      href="/AIFeature/LifePrediction"
+                      onClick={closeAll}
+                    />
+                    
+                    <FeatureCard
+                      title="Aura Check"
+                      desc="Deep AI-powered aura check insights"
+                      img="/images/palm.png"
+                      href="/AIFeature/AuraCheck"
                       onClick={closeAll}
                     />
                   </div>
@@ -393,7 +427,7 @@ export default function Header(): React.ReactElement {
                 </h3>
                 <div className="space-y-4">
                   <Link
-                    href="/ai/vastu"
+                    href="/AIFeature/Vastu"
                     onClick={closeAll}
                     className="flex items-center gap-4 p-4 rounded-xl bg-neutral-50 hover:bg-neutral-100 transition-colors"
                   >
@@ -402,6 +436,7 @@ export default function Header(): React.ReactElement {
                         src="/images/vastu.png"
                         alt=""
                         fill
+                        sizes="64px"
                         className="object-cover"
                       />
                     </div>
@@ -414,8 +449,59 @@ export default function Header(): React.ReactElement {
                       </p>
                     </div>
                   </Link>
+
+
                   <Link
-                    href="/ai/palmistry"
+                    href="/AIFeature/Face"
+                    onClick={closeAll}
+                    className="flex items-center gap-4 p-4 rounded-xl bg-neutral-50 hover:bg-neutral-100 transition-colors"
+                  >
+                    <div className="relative w-16 h-12 rounded-lg overflow-hidden shrink-0">
+                      <Image
+                        src="/images/face.png"
+                        alt=""
+                        fill
+                        sizes="64px"
+                        className="object-cover"
+                      />
+                    </div>
+                    <div>
+                      <h4 className="text-[15px] font-semibold text-neutral-900">
+                        Face Reading
+                      </h4>
+                      <p className="text-[13px] text-neutral-600">
+                        Face reading
+                      </p>
+                    </div>
+                  </Link>
+
+                  <Link
+                    href="/AIFeature/Face"
+                    onClick={closeAll}
+                    className="flex items-center gap-4 p-4 rounded-xl bg-neutral-50 hover:bg-neutral-100 transition-colors"
+                  >
+                    <div className="relative w-16 h-12 rounded-lg overflow-hidden shrink-0">
+                      <Image
+                        src="/images/face.png"
+                        alt=""
+                        fill
+                        sizes="64px"
+                        className="object-cover"
+                      />
+                    </div>
+                    <div>
+                      <h4 className="text-[15px] font-semibold text-neutral-900">
+                        Face Reading
+                      </h4>
+                      <p className="text-[13px] text-neutral-600">
+                        Face reading
+                      </p>
+                    </div>
+                  </Link>
+
+
+                  <Link
+                    href="/AIFeature/Numerology"
                     onClick={closeAll}
                     className="flex items-center gap-4 p-4 rounded-xl bg-neutral-50 hover:bg-neutral-100 transition-colors"
                   >
@@ -424,15 +510,64 @@ export default function Header(): React.ReactElement {
                         src="/images/palm.png"
                         alt=""
                         fill
+                        sizes="64px"
                         className="object-cover"
                       />
                     </div>
                     <div>
                       <h4 className="text-[15px] font-semibold text-neutral-900">
-                        Palmistry AI
+                        Numerology AI
                       </h4>
                       <p className="text-[13px] text-neutral-600">
-                        Palm insights
+                        Numerology insights
+                      </p>
+                    </div>
+                  </Link>
+
+                  <Link
+                    href="/AIFeature/LifePrediction"
+                    onClick={closeAll}
+                    className="flex items-center gap-4 p-4 rounded-xl bg-neutral-50 hover:bg-neutral-100 transition-colors"
+                  >
+                    <div className="relative w-16 h-12 rounded-lg overflow-hidden shrink-0">
+                      <Image
+                        src="/images/palm.png"
+                        alt=""
+                        fill
+                        sizes="64px"
+                        className="object-cover"
+                      />
+                    </div>
+                    <div>
+                      <h4 className="text-[15px] font-semibold text-neutral-900">
+                        Life Prediction
+                      </h4>
+                      <p className="text-[13px] text-neutral-600">
+                        Life prediction 
+                      </p>
+                    </div>
+                  </Link>
+
+                  <Link
+                    href="/AIFeature/AuraCheck"
+                    onClick={closeAll}
+                    className="flex items-center gap-4 p-4 rounded-xl bg-neutral-50 hover:bg-neutral-100 transition-colors"
+                  >
+                    <div className="relative w-16 h-12 rounded-lg overflow-hidden shrink-0">
+                      <Image
+                        src="/images/palm.png"
+                        alt=""
+                        fill
+                        sizes="64px"
+                        className="object-cover"
+                      />
+                    </div>
+                    <div>
+                      <h4 className="text-[15px] font-semibold text-neutral-900">
+                        Aura Check
+                      </h4>
+                      <p className="text-[13px] text-neutral-600">
+                        Aura check Gamification
                       </p>
                     </div>
                   </Link>
@@ -499,6 +634,7 @@ function FeatureCard({
           src={img}
           alt=""
           fill
+          sizes="96px"
           className="object-cover transition-transform duration-500 group-hover:scale-105"
         />
       </div>

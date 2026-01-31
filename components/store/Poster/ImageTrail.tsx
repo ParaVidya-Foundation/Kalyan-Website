@@ -29,9 +29,9 @@ type Props = {
 
 export default function ImageTrail({
   images = [
-    "/Poster/Posters/trail.webp",
-    "/Poster/Posters/trail1.webp",
-    "/Poster/Posters/trail2.webp",
+    "/Service/Poster/Posters/trail.webp",
+    "/Service/Poster/Posters/trail1.webp",
+    "/Service/Poster/Posters/trail2.webp",
   ],
   maxSprites = 18,
   spriteSize = 140,

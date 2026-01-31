@@ -20,15 +20,15 @@ interface GemData {
 }
 
 const PreciousStone: GemData[] = [
-  { name: "Yellow Sapphire", imgSrc: "/Gems/Yellow-Sapphire.webp", price: 17000, discount: 10, iconBg: "#F9FAFB" },
-  { name: "Red Coral", imgSrc: "/Gems/Red-Coral.webp", price: 2000, discount: 20, iconBg: "#F9FAFB" },
-  { name: "Pearl", imgSrc: "/Gems/Pearl.webp", price: 2500, discount: 15, iconBg: "#F9FAFB" },
-  { name: "Hessonite", imgSrc: "/Gems/Hessonite.webp", price: 3000, discount: 15, iconBg: "#F9FAFB" },
-  { name: "Cats Eye", imgSrc: "/Gems/Cats-Eye.webp", price: 3000, discount: 20, iconBg: "#F9FAFB" },
-  { name: "Blue Sapphire", imgSrc: "/Gems/Blue-Sapphire.webp", price: 17000, discount: 10, iconBg: "#F9FAFB" },
-  { name: "Ruby", imgSrc: "/Gems/Ruby.webp", price: 6000, discount: 15, iconBg: "#F9FAFB" },
-  { name: "White Sapphire", imgSrc: "/Gems/White-Sapphire.webp", price: 17000, discount: 20, iconBg: "#F9FAFB" },
-  { name: "Green Emerald", imgSrc: "/Gems/Green-Emerald.webp", price: 10000, discount: 10, iconBg: "#F9FAFB" },
+  { name: "Yellow Sapphire", imgSrc: "/Service/Gems/Yellow-Sapphire.webp", price: 17000, discount: 10, iconBg: "#FEF7F2" },
+  { name: "Red Coral", imgSrc: "/Service/Gems/Red-Coral.webp", price: 2000, discount: 20, iconBg: "#FEF7F2" },
+  { name: "Pearl", imgSrc: "/Service/Gems/Pearl.webp", price: 2500, discount: 15, iconBg: "#FEF7F2" },
+  { name: "Hessonite", imgSrc: "/Service/Gems/Hessonite.webp", price: 3000, discount: 15, iconBg: "#FEF7F2" },
+  { name: "Cats Eye", imgSrc: "/Service/Gems/Cats-Eye.webp", price: 3000, discount: 20, iconBg: "#FEF7F2" },
+  { name: "Blue Sapphire", imgSrc: "/Service/Gems/Blue-Sapphire.webp", price: 17000, discount: 10, iconBg: "#FEF7F2" },
+  { name: "Ruby", imgSrc: "/Service/Gems/Ruby.webp", price: 6000, discount: 15, iconBg: "#FEF7F2" },
+  { name: "White Sapphire", imgSrc: "/Service/Gems/White-Sapphire.webp", price: 17000, discount: 20, iconBg: "#FEF7F2" },
+  { name: "Green Emerald", imgSrc: "/Service/Gems/Green-Emerald.webp", price: 10000, discount: 10, iconBg: "#FEF7F2" },
 ];
 
 export default function PreciousGems() {
@@ -261,7 +261,7 @@ export default function PreciousGems() {
                 <div className="box">
                   <div className="imgBox">
                     <Image
-                      src={gem.imgSrc || "/Gems/center.webp"}
+                      src={gem.imgSrc || "/Service/Gems/center.webp"}
                       alt={gem.name}
                       fill
                       style={{ objectFit: 'cover' }}
@@ -273,8 +273,8 @@ export default function PreciousGems() {
                       blurDataURL="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMSIgaGVpZ2h0PSIxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiNmNWY1ZjUiLz48L3N2Zz4="
                       onError={(e) => {
                         const target = e.target as HTMLImageElement;
-                        if (target.src !== "/Gems/center.webp") {
-                          target.src = "/Gems/center.webp";
+                        if (target.src !== "/Service/Gems/center.webp") {
+                          target.src = "/Service/Gems/center.webp";
                         }
                       }}
                     />

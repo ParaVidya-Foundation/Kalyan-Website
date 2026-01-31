@@ -20,15 +20,15 @@ export default function AccessoriesProductPage() {
 
   // ✅ Related products
   const relatedProducts = [
-    { id: "1", title: "Yellow Sapphire", image: "/Gems/Yellow-Sapphire.webp", price: 106434 },
-    { id: "2", title: "Red Coral", image: "/Gems/Red-Coral.webp", price: 106434 },
-    { id: "3", title: "Pearl", image: "/Gems/Pearl.webp", price: 106434 },
-    { id: "4", title: "Hessonite", image: "/Gems/Hessonite.webp", price: 106434 },
-    { id: "5", title: "Cats Eye", image: "/Gems/Cats-Eye.webp", price: 106434 },
-    { id: "6", title: "Blue Sapphire", image: "/Gems/Blue-Sapphire.webp", price: 106434 },
-    { id: "7", title: "Ruby", image: "/Gems/Ruby.webp", price: 106434 },
-    { id: "8", title: "White Sapphire", image: "/Gems/White-Sapphire.webp", price: 106434 },
-    { id: "9", title: "Green Emerald", image: "/Gems/Green-Emerald.webp", price: 106434 },
+    { id: "1", title: "Yellow Sapphire", image: "/Service/Gems/Yellow-Sapphire.webp", price: 106434 },
+    { id: "2", title: "Red Coral", image: "/Service/Gems/Red-Coral.webp", price: 106434 },
+    { id: "3", title: "Pearl", image: "/Service/Gems/Pearl.webp", price: 106434 },
+    { id: "4", title: "Hessonite", image: "/Service/Gems/Hessonite.webp", price: 106434 },
+    { id: "5", title: "Cats Eye", image: "/Service/Gems/Cats-Eye.webp", price: 106434 },
+    { id: "6", title: "Blue Sapphire", image: "/Service/Gems/Blue-Sapphire.webp", price: 106434 },
+    { id: "7", title: "Ruby", image: "/Service/Gems/Ruby.webp", price: 106434 },
+    { id: "8", title: "White Sapphire", image: "/Service/Gems/White-Sapphire.webp", price: 106434 },
+    { id: "9", title: "Green Emerald", image: "/Service/Gems/Green-Emerald.webp", price: 106434 },
   ];
 
   // ✅ final return
@@ -39,12 +39,12 @@ export default function AccessoriesProductPage() {
         <div className="grid gap-8 md:grid-cols-2">
           <ProductCarousel
             items={[
-              { kind: "image", src: "/Accessories/Accessories/accessories-1.webp", alt: "Accessories 1" },
-              { kind: "image", src: "/Accessories/Accessories/accessories-2.webp", alt: "Accessories 2" },
-              { kind: "image", src: "/Accessories/Accessories/accessories-3.webp", alt: "Accessories 3" },
-              { kind: "image", src: "/Accessories/Accessories/accessories-4.webp", alt: "Accessories 4" },
-              { kind: "image", src: "/Accessories/Accessories/accessories-5.webp", alt: "Accessories 5" },
-              { kind: "image", src: "/Accessories/Accessories/accessories-6.webp", alt: "Accessories 6" },
+              { kind: "image", src: "/Service/Accessories/accessories-1.webp", alt: "Accessories 1" },
+              { kind: "image", src: "/Service/Accessories/accessories-2.webp", alt: "Accessories 2" },
+              { kind: "image", src: "/Service/Accessories/accessories-3.webp", alt: "Accessories 3" },
+              { kind: "image", src: "/Service/Accessories/accessories-4.webp", alt: "Accessories 4" },
+              { kind: "image", src: "/Service/Accessories/accessories-5.webp", alt: "Accessories 5" },
+              { kind: "image", src: "/Service/Accessories/accessories-6.webp", alt: "Accessories 6" },
             ]}
             aspect={1}
           />
@@ -81,7 +81,7 @@ export default function AccessoriesProductPage() {
         <Confused
           title="Accessories 1"
           subtitle="Accessories 1 is a beautiful set of accessories that are perfect for a wedding."
-          imageSrc="/Accessories/Accessories/accessories-1.webp"
+          imageSrc="/Service/Accessories/accessories-1.webp"
           ctaText="Buy Now"
         />
 

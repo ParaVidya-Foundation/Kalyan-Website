@@ -12,10 +12,10 @@ type TestimonialSliderProps = {
 
 const TestimonialSlider: React.FC<TestimonialSliderProps> = ({
   videos = [
-    "/Poster/Testimonials/testimonial1.mp4",
-    "/Poster/Testimonials/testimonial2.mp4",
-    "/Poster/Testimonials/testimonial3.mp4",
-    "/Poster/Testimonials/testimonial4.mp4",
+    "/Service/Poster/Testimonials/testimonial1.mp4",
+    "/Service/Poster/Testimonials/testimonial2.mp4",
+    "/Service/Poster/Testimonials/testimonial3.mp4",
+    "/Service/Poster/Testimonials/testimonial4.mp4",
   ],
   speed = 40,
   gap = 60,

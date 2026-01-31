@@ -24,7 +24,7 @@ export default function Orb({
   hoverIntensity = 0.4,
   rotateOnHover = true,
   forceHoverState = false,
-  backgroundColor = "#FEF7F2",
+  backgroundColor = "#FFFFFF",
   className,
   style,
 }: OrbProps) {

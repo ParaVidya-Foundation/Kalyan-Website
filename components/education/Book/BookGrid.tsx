@@ -99,7 +99,7 @@ const BookGrid: React.FC<BookGridProps> = ({ books, searchQuery = "" }) => {
                   title={book.title}
                   author={book.author}
                   description={book.description}
-                  onAskAI={() => router.push("/education/chat")}
+                  onAskAI={() => router.push("/login")}
                 />
               </motion.div>
             ))}

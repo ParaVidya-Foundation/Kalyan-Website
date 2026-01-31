@@ -87,7 +87,7 @@ function PosterCard({ poster }: { poster: Poster }) {
             transition={{ duration: 0.6, ease: "easeOut" }}
           >
             <Image
-              src={poster.images[imgIndex] || poster.images[0] || "/Poster/Posters/pos1.webp"}
+              src={poster.images[imgIndex] || poster.images[0] || "/Service/Poster/Posters/pos1.webp"}
               alt={poster.title}
               fill
               quality={90}

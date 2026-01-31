@@ -10,7 +10,7 @@ export default function GemsPage() {
     <div>
 <div className="w-full h-full overflow-hidden bg-[#FFFAE6] flex justify-center items-center">
   <Image
-    src="/Gems/Gems-Banner.jpg"
+    src="/Service/Gems/Gems-Banner.jpg"
     alt="Gems Banner"
     width={1920}           // UHD resolution for sharp scaling
     height={1080}          // EXACT height you want
@@ -26,7 +26,7 @@ export default function GemsPage() {
         <FloatingGems />
 <PreciousGems />
 <HeroGemContact
-        imageSrc="/Gems/Gems-confused.webp"
+        imageSrc="/Service/Gems/Gems-confused.webp"
         title="Confused About Which Gem to Choose?"
         subtitle="Not sure which gemstone to choose? Contact us for personalized recommendations."
         ctaText="Contact Us"

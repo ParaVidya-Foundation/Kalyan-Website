@@ -5,14 +5,14 @@ import type { WithContext, Thing } from "schema-dts";
 
 /** Your 8 products */
 const perfumes: Perfume[] = [
-  { id: 1, name: "Sun",        price: 15.0, images: ["/Perfume/Planets/sun.webp", "/Perfume/Bottles/saturn.png"] },
-  { id: 2, name: "Moon",        price: 22.0, images: ["/Perfume/Planets/moon.webp", "/Perfume/Bottles/saturn.png"] },
-  { id: 3, name: "Rahu",        price: 20.0, images: ["/Perfume/Planets/rahu.webp", "/Perfume/Bottles/saturn.png"] },
-  { id: 4, name: "Mars",price: 16.0, images: ["/Perfume/Planets/mars.webp", "/Perfume/Bottles/saturn.png"] },
-  { id: 5, name: "Mercury",      price: 19.0, images: ["/Perfume/Planets/mercury.webp", "/Perfume/Bottles/saturn.png"] },
-  { id: 6, name: "Jupiter",       price: 25.0, images: ["/Perfume/Planets/jupiter.webp", "/Perfume/Bottles/saturn.png"] },
-  { id: 7, name: "Venus",   price: 18.0, images: ["/Perfume/Planets/venus.webp", "/Perfume/Bottles/saturn.png"] },
-  { id: 8, name: "Saturn",        price: 21.0, images: ["/Perfume/Planets/saturn.webp", "/Perfume/Bottles/saturn.png"] },
+  { id: 1, name: "Sun",        price: 15.0, images: ["/Service/Perfume/Planets/sun.webp", "/Service/Perfume/Bottles/saturn.png"] },
+  { id: 2, name: "Moon",        price: 22.0, images: ["/Service/Perfume/Planets/moon.webp", "/Service/Perfume/Bottles/saturn.png"] },
+  { id: 3, name: "Rahu",        price: 20.0, images: ["/Service/Perfume/Planets/rahu.webp", "/Service/Perfume/Bottles/saturn.png"] },
+  { id: 4, name: "Mars",price: 16.0, images: ["/Service/Perfume/Planets/mars.webp", "/Service/Perfume/Bottles/saturn.png"] },
+  { id: 5, name: "Mercury",      price: 19.0, images: ["/Service/Perfume/Planets/mercury.webp", "/Service/Perfume/Bottles/saturn.png"] },
+  { id: 6, name: "Jupiter",       price: 25.0, images: ["/Service/Perfume/Planets/jupiter.webp", "/Service/Perfume/Bottles/saturn.png"] },
+  { id: 7, name: "Venus",   price: 18.0, images: ["/Service/Perfume/Planets/venus.webp", "/Service/Perfume/Bottles/saturn.png"] },
+  { id: 8, name: "Saturn",        price: 21.0, images: ["/Service/Perfume/Planets/saturn.webp", "/Service/Perfume/Bottles/saturn.png"] },
 ];
 
 const PerfumeGrid = React.memo(function PerfumeGrid() {

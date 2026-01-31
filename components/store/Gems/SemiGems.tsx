@@ -20,18 +20,18 @@ interface GemData {
 }
 
 const SemiStone: GemData[] = [
-  { name: "Feroza", imgSrc: "/Gems/Feroza.webp", price: 700, discount: 15, iconBg: "#F9FAFB" },
-  { name: "Amethyst", imgSrc: "/Gems/Amethyst.webp", price: 700, discount: 20, iconBg: "#F9FAFB" },
-  { name: "Lapis", imgSrc: "/Gems/Lapis.webp", price: 300, discount: 25, iconBg: "#F9FAFB" },
-  { name: "Sunhela", imgSrc: "/Gems/Sunhela.webp", price: 300, discount: 10, iconBg: "#F9FAFB" },
-  { name: "Kaka Neeli", imgSrc: "/Gems/Kaka-Neeli.webp", price: 700, discount: 18, iconBg: "#F9FAFB" },
-  { name: "Tiger Eye", imgSrc: "/Gems/Tiger-Eye.webp", price: 200, discount: 12, iconBg: "#F9FAFB" },
-  { name: "Sulemani Hakik", imgSrc: "/Gems/Sulemani-Hakik.webp", price: 300, discount: 22, iconBg: "#F9FAFB" },
-  { name: "Mahe Mariam", imgSrc: "/Gems/Mahe-Mariam.webp", price: 300, discount: 14, iconBg: "#F9FAFB" },
-  { name: "Moonstone", imgSrc: "/Gems/Moonstone.webp", price: 300, discount: 19, iconBg: "#F9FAFB" },
-  { name: "Peridot", imgSrc: "/Gems/Peridot.webp", price: 1000, discount: 17, iconBg: "#F9FAFB" },
-  { name: "Turmuli", imgSrc: "/Gems/Turmuli.webp", price: 1000, discount: 21, iconBg: "#F9FAFB" },
-  { name: "Zirkon", imgSrc: "/Gems/Zirkon.webp", price: 1000, discount: 16, iconBg: "#F9FAFB" },
+  { name: "Feroza", imgSrc: "/Service/Gems/Feroza.webp", price: 700, discount: 15, iconBg: "#FEF7F2" },
+  { name: "Amethyst", imgSrc: "/Service/Gems/Amethyst.webp", price: 700, discount: 20, iconBg: "#FEF7F2" },
+  { name: "Lapis", imgSrc: "/Service/Gems/Lapis.webp", price: 300, discount: 25, iconBg: "#FEF7F2" },
+  { name: "Sunhela", imgSrc: "/Service/Gems/Sunhela.webp", price: 300, discount: 10, iconBg: "#FEF7F2" },
+  { name: "Kaka Neeli", imgSrc: "/Service/Gems/Kaka-Neeli.webp", price: 700, discount: 18, iconBg: "#FEF7F2" },
+  { name: "Tiger Eye", imgSrc: "/Service/Gems/Tiger-Eye.webp", price: 200, discount: 12, iconBg: "#FEF7F2" },
+  { name: "Sulemani Hakik", imgSrc: "/Service/Gems/Sulemani-Hakik.webp", price: 300, discount: 22, iconBg: "#FEF7F2" },
+  { name: "Mahe Mariam", imgSrc: "/Service/Gems/Mahe-Mariam.webp", price: 300, discount: 14, iconBg: "#FEF7F2" },
+  { name: "Moonstone", imgSrc: "/Service/Gems/Moonstone.webp", price: 300, discount: 19, iconBg: "#FEF7F2" },
+  { name: "Peridot", imgSrc: "/Service/Gems/Peridot.webp", price: 1000, discount: 17, iconBg: "#FEF7F2" },
+  { name: "Turmuli", imgSrc: "/Service/Gems/Turmuli.webp", price: 1000, discount: 21, iconBg: "#FEF7F2" },
+  { name: "Zirkon", imgSrc: "/Service/Gems/Zirkon.webp", price: 1000, discount: 16, iconBg: "#FEF7F2" },
 ];
 
 export default function SemiGems() {
@@ -264,7 +264,7 @@ export default function SemiGems() {
                 <div className="box">
                   <div className="imgBox">
                     <Image
-                      src={gem.imgSrc || "/Gems/center.webp"}
+                      src={gem.imgSrc || "/Service/Gems/center.webp"}
                       alt={gem.name}
                       fill
                       style={{ objectFit: 'cover' }}
@@ -276,8 +276,8 @@ export default function SemiGems() {
                       blurDataURL="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMSIgaGVpZ2h0PSIxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiNmNWY1ZjUiLz48L3N2Zz4="
                       onError={(e) => {
                         const target = e.target as HTMLImageElement;
-                        if (target.src !== "/Gems/center.webp") {
-                          target.src = "/Gems/center.webp";
+                        if (target.src !== "/Service/Gems/center.webp") {
+                          target.src = "/Service/Gems/center.webp";
                         }
                       }}
                     />
