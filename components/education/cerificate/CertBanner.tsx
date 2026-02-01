@@ -24,54 +24,53 @@ const FEATURES = [
 
 export default function CertBanner() {
   return (
-    <section className="relative w-full flex justify-center">
-      {/* 🌫 Ambient gradients (subtle, Apple-style) */}
+    <section className="relative w-full flex justify-center py-24">
+      {/* 🌤 Soft ambient glow */}
       <div className="pointer-events-none absolute inset-0">
-        <div className="absolute -top-32 -left-32 h-[420px] w-[420px] rounded-full bg-indigo-200/20 blur-[160px]" />
-        <div className="absolute bottom-0 -right-32 h-[420px] w-[420px] rounded-full bg-amber-200/25 blur-[180px]" />
+        <div className="absolute -top-40 -left-40 h-[520px] w-[520px] rounded-full bg-amber-200/30 blur-[180px]" />
+        <div className="absolute bottom-0 -right-40 h-[520px] w-[520px] rounded-full bg-yellow-100/40 blur-[200px]" />
       </div>
 
-      {/* BANNER CONTAINER */}
+      {/* MAIN CONTAINER */}
       <div
         className="
           relative z-10
-          w-[92%] mx-auto
-          min-h-[70vh]
-          rounded-[40px]
-          bg-[#0f172a]
-          overflow-hidden
-          shadow-[0_40px_120px_rgba(2,6,23,0.45)]
+          w-[94%] mx-auto
+          min-h-[72vh]
+          rounded-[44px]
+          bg-white
+          border border-amber-100
+          shadow-[0_40px_120px_rgba(120,80,20,0.18)]
           grid grid-cols-1 lg:grid-cols-2
           items-center
+          overflow-hidden
         "
       >
-        {/* LEFT — CONTENT */}
-        <div className="px-10 py-16 lg:py-20 space-y-8 text-white">
+        {/* ================= LEFT CONTENT ================= */}
+        <div className="px-10 lg:px-16 py-16 lg:py-20 space-y-10">
           <div>
-            <h2 className="text-3xl md:text-4xl font-semibold tracking-tight">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight text-slate-900">
               Astrology Certification
-              <span className="block mt-2 font-serif text-indigo-300">
-                Built for Real Careers
+              <span className="block mt-2 font-serif font-bold text-amber-600">
+                Designed for Real Careers
               </span>
             </h2>
 
-            <p className="mt-6 text-lg leading-relaxed text-slate-300 max-w-xl">
-              A professionally structured certification program for learners
-              who value depth, discipline, and long-term credibility in astrology.
+            <p className="mt-6 text-base md:text-lg leading-relaxed text-slate-600 max-w-xl">
+              A professionally structured certification pathway for learners who
+              value depth, discipline, and long-term credibility in astrology —
+              beyond casual courses or hobby learning.
             </p>
           </div>
 
           {/* FEATURE LIST */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 max-w-xl">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-xl">
             {FEATURES.map((item, i) => (
-              <div
-                key={i}
-                className="flex items-start gap-4"
-              >
-                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-white/10 text-indigo-300">
-                  <item.icon className="h-5 w-5" />
+              <div key={i} className="flex items-start gap-4">
+                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-amber-100 text-amber-700">
+                  <item.icon className="h-5 w-5" strokeWidth={1.8} />
                 </div>
-                <p className="text-sm leading-relaxed text-slate-300">
+                <p className="text-sm leading-relaxed text-slate-600">
                   {item.text}
                 </p>
               </div>
@@ -79,16 +78,17 @@ export default function CertBanner() {
           </div>
 
           {/* CTA */}
-          <div className="pt-4 flex gap-4">
+          <div className="pt-4 flex flex-wrap gap-4">
             <button
               className="
                 rounded-full
-                bg-white
+                bg-amber-400
                 px-8 py-3
-                text-sm font-medium text-slate-900
-                shadow-[0_12px_40px_rgba(255,255,255,0.15)]
+                text-sm font-medium text-amber-950
+                shadow-[0_12px_40px_rgba(251,191,36,0.35)]
                 transition-all duration-300
                 hover:-translate-y-1
+                hover:bg-amber-300
               "
             >
               View Certification Programs
@@ -97,11 +97,11 @@ export default function CertBanner() {
             <button
               className="
                 rounded-full
-                border border-white/20
+                border border-amber-300
                 px-8 py-3
-                text-sm font-medium text-white
+                text-sm font-medium text-amber-700
                 transition-all duration-300
-                hover:bg-white/10
+                hover:bg-amber-50
               "
             >
               View Curriculum
@@ -109,18 +109,18 @@ export default function CertBanner() {
           </div>
         </div>
 
-        {/* RIGHT — IMAGE */}
-        <div className="relative h-full w-full flex items-center justify-center">
-          <div className="relative w-[80%] max-w-md">
+        {/* ================= RIGHT IMAGE ================= */}
+        <div className="relative h-full w-full flex items-end justify-center lg:justify-end">
+          <div className="relative w-[92%] lg:w-[110%] max-w-2xl -mb-10">
             <Image
-              src="/Certification/certbg.png"
+              src="/Certification/study.webp"
               alt="Astrology certification illustration"
-              width={520}
-              height={520}
+              width={900}
+              height={900}
               priority
               className="
                 w-full h-auto object-contain
-                drop-shadow-[0_30px_80px_rgba(0,0,0,0.35)]
+                drop-shadow-[0_40px_120px_rgba(120,80,20,0.25)]
               "
             />
           </div>

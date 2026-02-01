@@ -7,52 +7,52 @@ import CourseCard, { Course } from "./coursecard";
 const COURSES: Course[] = [
   {
     id: "ast-001",
-    title: "Foundations of Vedic Astrology",
+    title: "Complete Vedic Astrology Course",
     badge: "Core Certification",
-    img: "/courses/vedic-1.jpg",
+    img: "/Certification/combo17.webp",
     category: "Astrology",
     excerpt:
       "A structured introduction to planetary principles, chart architecture, and classical predictive foundations.",
   },
   {
     id: "ast-002",
-    title: "Advanced Kundli Interpretation",
+    title: "Advanced K.P Astrology Course",
     badge: "Advanced Level",
-    img: "/courses/kundli-1.jpg",
+    img: "/Certification/Kp-Astrology-Basic-advance.webp",
     category: "Astrology",
     excerpt:
       "Systematic chart reading methodologies with real-world analytical frameworks.",
   },
   {
     id: "vastu-001",
-    title: "Applied Vastu for Contemporary Spaces",
+    title: "Vedic & Lal Kitab Combo Course",
     badge: "Professional Track",
-    img: "/courses/vastu-1.jpg",
-    category: "Vastu",
+    img: "/Certification/combo19.webp",
+    category: "Lal Kitab",
     excerpt:
       "Practical Vastu principles adapted for modern residential and commercial environments.",
   },
   {
     id: "num-001",
-    title: "Numerology: Life Path & Destiny Analysis",
+    title: "Complete Lal Kitab Course",
     badge: "Certification Module",
-    img: "/courses/num-1.jpg",
-    category: "Numerology",
+    img: "/Certification/Advance-Lal-Kitab-(grammervarshfalremedies).webp",
+    category: "Lal Kitab",
     excerpt:
       "Life path numbers, destiny patterns, and decision-making indicators grounded in classical numerology.",
   },
   {
     id: "palm-001",
-    title: "Samudrik Palmistry Essentials",
+    title: "Complete Palmistry Course",
     badge: "Foundational Study",
-    img: "/courses/palm-1.jpg",
+    img: "/Certification/Practical-Palmistry-Course.webp",
     category: "Palmistry",
     excerpt:
       "Character analysis and timing indicators through structured hand morphology study.",
   },
 ];
 
-const CATEGORIES = ["All", "Astrology", "Vastu", "Numerology", "Palmistry"];
+const CATEGORIES = ["All", "Astrology", "Lal Kitab", "Palmistry"];
 
 /* -------------------------------------------------------------------------- */
 /*                              MAIN COMPONENT                                */

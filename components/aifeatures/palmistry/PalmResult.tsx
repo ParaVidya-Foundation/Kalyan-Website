@@ -9,7 +9,7 @@ type Trait = { name: string; value: number; note: string };
 
 /* -------------------- DATA -------------------- */
 const images = {
-  palm: "/AI/Palm/palm.jpg",
+  palm: "/AI/Palmistry/palm.webp",
 };
 
 const DEFAULT_INFO: InfoRow[] = [

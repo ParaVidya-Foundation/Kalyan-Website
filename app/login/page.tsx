@@ -6,7 +6,7 @@ import DuoAuthForm from "@/components/login/DuoAuthForm";
 export default function LoginPage() {
   return (
     <main className="login-page">
-      <section className="mountain-banner">
+      <section className="mountain-banner rounded-b-[36px]">
         {/* GPU CLOUD BACKGROUND */}
         <div className="cloud-canvas">
           <CloudScene />

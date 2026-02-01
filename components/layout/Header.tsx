@@ -290,7 +290,7 @@ export default function Header(): React.ReactElement {
                   <FeatureCard
                       title="Vastu AI"
                       desc="Spatial intelligence & energy mapping"
-                      img="/images/vastu.png"
+                      img="/vastu.webp"
                       href="/AIFeature/Vastu"
                       onClick={closeAll}
                     />
@@ -304,7 +304,7 @@ export default function Header(): React.ReactElement {
                     <FeatureCard
                       title="Palmistry AI"
                       desc="Deep AI-powered palm insights"
-                      img="/images/palm.png"
+                      img="/Palmistry.webp"
                       href="/AIFeature/Palmistry"
                       onClick={closeAll}
                     />
@@ -312,14 +312,14 @@ export default function Header(): React.ReactElement {
                     <FeatureCard
                       title="Numerology AI"
                       desc="Deep AI-powered numerology insights"
-                      img="/images/palm.png"
+                      img="/numerology.webp"
                       href="/AIFeature/Numerology"
                       onClick={closeAll}
                     />
                      <FeatureCard
                       title="Life Prediction"
                       desc="Deep AI-powered life prediction insights"
-                      img="/images/palm.png"
+                      img="/Life.webp"
                       href="/AIFeature/LifePrediction"
                       onClick={closeAll}
                     />
@@ -327,7 +327,7 @@ export default function Header(): React.ReactElement {
                     <FeatureCard
                       title="Aura Check"
                       desc="Deep AI-powered aura check insights"
-                      img="/images/palm.png"
+                      img="/aura.webp"
                       href="/AIFeature/AuraCheck"
                       onClick={closeAll}
                     />
@@ -433,7 +433,7 @@ export default function Header(): React.ReactElement {
                   >
                     <div className="relative w-16 h-12 rounded-lg overflow-hidden shrink-0">
                       <Image
-                        src="/images/vastu.png"
+                        src="/vastu.webp"
                         alt=""
                         fill
                         sizes="64px"
@@ -507,7 +507,7 @@ export default function Header(): React.ReactElement {
                   >
                     <div className="relative w-16 h-12 rounded-lg overflow-hidden shrink-0">
                       <Image
-                        src="/images/palm.png"
+                        src="/numerology.webp"
                         alt=""
                         fill
                         sizes="64px"
@@ -531,7 +531,7 @@ export default function Header(): React.ReactElement {
                   >
                     <div className="relative w-16 h-12 rounded-lg overflow-hidden shrink-0">
                       <Image
-                        src="/images/palm.png"
+                        src="/Life.webp"
                         alt=""
                         fill
                         sizes="64px"
@@ -555,7 +555,7 @@ export default function Header(): React.ReactElement {
                   >
                     <div className="relative w-16 h-12 rounded-lg overflow-hidden shrink-0">
                       <Image
-                        src="/images/palm.png"
+                        src="/aura.webp"
                         alt=""
                         fill
                         sizes="64px"

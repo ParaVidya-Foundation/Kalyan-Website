@@ -16,7 +16,7 @@ const STEPS = [
       "No filters or heavy editing required",
       "Secure & private — images are never shared",
     ],
-    image: "/AI/Face/step-1.webp",
+    image: "/AI/Face/upload.webp",
   },
   {
     id: 2,
@@ -30,7 +30,7 @@ const STEPS = [
       "Emotion, mindset & personality indicators",
       "Luck, career, relationships & health zones",
     ],
-    image: "/AI/Face/step-2.webp",
+    image: "/AI/Face/analysis.webp",
   },
   {
     id: 3,
@@ -44,7 +44,7 @@ const STEPS = [
       "Emotional strengths & challenges",
       "Simple guidance for self-improvement",
     ],
-    image: "/AI/Face/step-3.webp",
+    image: "/AI/Face/result.webp",
   },
 ] as const;
 

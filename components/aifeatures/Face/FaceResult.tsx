@@ -9,15 +9,14 @@ type Trait = { name: string; value: number; note: string };
 
 /* -------------------- DATA -------------------- */
 const images = {
-  front: "/AI/Face/front.jpg",
+  front: "/AI/Face/front.webp",
 };
 
 const DEFAULT_INFO: InfoRow[] = [
-  { label: "Name", value: "Mark Wahlberg" },
-  { label: "Birth Date", value: "1971-06-05" },
+  { label: "Name", value: "Soham Vashist" },
+  { label: "Birth Date", value: "08-06-2004" },
   { label: "Gender", value: "Male" },
-  { label: "Ethnicity", value: "European" },
-  { label: "Country", value: "USA" },
+  { label: "Country", value: "India" },
   { label: "Primary Signal", value: "Leadership & Authority" },
 ];
 
