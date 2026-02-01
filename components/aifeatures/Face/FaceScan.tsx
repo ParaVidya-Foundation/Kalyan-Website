@@ -73,7 +73,7 @@ export default function FaceScan() {
           <div className="relative flex justify-center md:justify-end">
             <div className="relative w-[320px] h-[320px] md:w-[440px] md:h-[440px] overflow-hidden rounded-3xl animate-[float_6s_ease-in-out_infinite]">
               <Image
-                src="/AI/Face/scan.webp"
+                src="/AI/Face/hero.webp"
                 alt="Face Scan Floor Plan"
                 fill
                 priority

@@ -11,7 +11,7 @@ const demoPosts: AIBlogCardProps[] = [
   {
     id: "ai-1",
     title: "AI in Astrology",
-    image: "/Blogs/AIBlogs/AIAstro.jpg",
+    image: "/Blogs/AIBlogs/AIASTRO.jpg",
     imageAlt: "AI in Astrology",
     href: "/login",
     category: "Educational",

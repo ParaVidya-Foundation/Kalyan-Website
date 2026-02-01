@@ -6,9 +6,9 @@ import FloorPlanGeneratorTab from "./tab/FloorPlanGeneratorTab";
 import FloorPlanOptimizerTab from "./tab/FloorPlanOptimizerTab";
 
 const LEFT_IMAGES = [
-  "/AI/Vastu/scan.webp",
-  "/AI/Vastu/scan.webp",
-  "/AI/Vastu/scan.webp",
+  "/AI/Vastu/Vastu-Mandala-Chakra.webp",
+  "/AI/Vastu/floor-plan-generator.webp",
+  "/AI/Vastu/floor-plan-optimizer.webp",
 ];
 
 export default function VastuTools(): JSX.Element {

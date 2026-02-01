@@ -17,32 +17,32 @@ type Testimonial = {
 const TESTIMONIALS: Testimonial[] = [
   {
     id: 1,
-    name: "Ananya Sharma",
-    location: "New Delhi, India",
+    name: "Shubham Vashist",
+    location: "Banaras, India",
     role: "Certified Astrology Practitioner",
     quote:
       "The certification structure felt genuinely academic. The exams tested understanding, not memorization. This is the first astrology credential I felt confident listing professionally.",
-    image: "/testimonials/user-1.jpg",
+    image: "/Certification/shubham.webp",
     rating: "Rated 4.9/5 by verified candidates",
   },
   {
     id: 2,
-    name: "Rohit Iyer",
-    location: "Bengaluru, India",
+    name: "Soham Vashist",
+    location: "Gurugram, India",
     role: "Astrology Consultant",
     quote:
       "What stood out was the examination roadmap. Each assessment aligned clearly with real consultation scenarios. It feels closer to a professional board exam than an online course.",
-    image: "/testimonials/user-2.jpg",
+    image: "/Certification/soham.webp",
     rating: "Trusted by 1,200+ learners",
   },
   {
     id: 3,
-    name: "Megha Kulkarni",
-    location: "Pune, India",
+    name: "Soham Vashist",
+    location: "Banaras, India",
     role: "Vedic Astrology Student",
     quote:
       "The exams helped me identify gaps in fundamentals like dashas and predictive timing. The certification carries weight because the process is disciplined and structured.",
-    image: "/testimonials/user-3.jpg",
+    image: "/Certification/shubham.webp",
     rating: "Academically reviewed certification",
   },
 ];
