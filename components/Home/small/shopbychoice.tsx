@@ -16,32 +16,32 @@ const CHOICES: ChoiceItem[] = [
   {
     label: "Sun",
     subtitle: "Authority · Vitality · Recognition",
-    image: "/zodiac/sun.png",
+    image: "/sunproduct.webp",
   },
   {
     label: "Moon",
     subtitle: "Mind · Emotions · Inner Peace",
-    image: "/zodiac/moon.png",
+    image: "/moonproduct.webp",
   },
   {
     label: "Mars",
     subtitle: "Strength · Courage · Action",
-    image: "/zodiac/mars.png",
+    image: "/marsproduct.webp",
   },
   {
     label: "Venus",
     subtitle: "Love · Beauty · Harmony",
-    image: "/zodiac/venus.png",
+    image: "/venusproduct.webp",
   },
   {
     label: "Jupiter",
     subtitle: "Wisdom · Growth · Fortune",
-    image: "/zodiac/jupiter.png",
+    image: "/jupiterproduct.webp",
   },
   {
     label: "Saturn",
     subtitle: "Discipline · Karma · Stability",
-    image: "/zodiac/saturn.png",
+    image: "/saturnproduct.webp",
   },
 ];
 
