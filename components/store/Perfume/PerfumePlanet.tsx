@@ -22,7 +22,7 @@ const PLANETS: Planet[] = [
   { id: "mars", planetImg: "/Service/Perfume/Planets/mangal_card.webp", perfumeImg: "/Service/Perfume/Planets/mars.webp", desc: "Mars — Flame of courage, scent of victory." },
   { id: "mercury", planetImg: "/Service/Perfume/Planets/budh_card.webp", perfumeImg: "/Service/Perfume/Planets/mercury.webp", desc: "Mercury — Quick thoughts, cool citrus." },
   { id: "jupiter", planetImg: "/Service/Perfume/Planets/guru_card.webp", perfumeImg: "/Service/Perfume/Planets/jupiter.webp", desc: "Jupiter — Grandeur laced in calm sandalwood." },
-  { id: "venus", planetImg: "/Service/Perfume/Planets/shukra_card.webp", perfumeImg: "/Service/Perfume/Planets/venus.webp", desc: "Venus — Love reborn in rose and velvet." },
+  { id: "venus", planetImg: "/Service/Perfume/Planets/shukra_card.webp", perfumeImg: "/Service/Perfume/Planets/Venus.webp", desc: "Venus — Love reborn in rose and velvet." },
   { id: "saturn", planetImg: "/Service/Perfume/Planets/shani_card.webp", perfumeImg: "/Service/Perfume/Planets/saturn.webp", desc: "Saturn — The scent of timeless strength." },
   { id: "rahu", planetImg: "/Service/Perfume/Planets/rahu_card.webp", perfumeImg: "/Service/Perfume/Planets/rahu.webp", desc: "Rahu — Shadow’s fire, smoky mystery." },
 ];

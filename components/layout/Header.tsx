@@ -258,7 +258,7 @@ export default function Header(): React.ReactElement {
                     </div>
                     <div className="rounded-2xl overflow-hidden w-[280px] h-[180px] relative">
                       <Image
-                        src="/images/research.jpg"
+                        src="/research.webp"
                         alt="Research insights"
                         fill
                         sizes="280px"
@@ -304,7 +304,7 @@ export default function Header(): React.ReactElement {
                     <FeatureCard
                       title="Palmistry AI"
                       desc="Deep AI-powered palm insights"
-                      img="/Palmistry.webp"
+                      img="/palmistry.webp"
                       href="/AIFeature/Palmistry"
                       onClick={closeAll}
                     />

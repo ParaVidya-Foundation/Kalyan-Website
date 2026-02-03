@@ -4,12 +4,12 @@ import { ShopCard } from "./shopcard";
 
 const items = [
  
-  { title: "Blue Sapphire Gemstone", img: "/Gems/Blue-Sapphire.webp" },
-  { title: "Rudraksha Mala", img: "/Accessories/rud-mala.webp" },
-  { title: "Shree Krishna Poster", img: "/Poster/Posters/pos3.webp" }, 
-  { title: "Aries Perfume", img: "/Perfume/Zodiac/aries1.webp" },
-  { title: "Cancer Perfume", img: "/Perfume/Zodiac/cancer1.webp" },
-  { title: "Hessonite Gemstone", img: "/Gems/Hessonite.webp" },
+  { title: "Blue Sapphire Gemstone", img: "/Service/Gems/Blue-Sapphire.webp" },
+  { title: "Rudraksha Mala", img: "/Service/Accessories/rud-mala.webp" },
+  { title: "Shree Krishna Poster", img: "/Service/Poster/Posters/pos3.webp" }, 
+  { title: "Aries Perfume", img: "/Service/Perfume/Zodiac/aries1.webp" },
+  { title: "Cancer Perfume", img: "/Service/Perfume/Zodiac/cancer1.webp" },
+  { title: "Hessonite Gemstone", img: "/Service/Gems/Hessonite.webp" },
 ];
 
 export default function SpiritualHero() {

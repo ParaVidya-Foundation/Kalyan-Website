@@ -15,7 +15,7 @@ export interface ContainerTextFlipProps {
 
 export function ContainerTextFlip({
   words = [],
-  interval = 3000,
+  interval = 5000,
   className,
   textClassName,
   animationDuration = 700,
